@@ -1,8 +1,8 @@
 {
+  "title": "Recruitment Workflow Automation",
   "id": "recruitment-automation",
   "order": 5,
   "published": true,
-  "title": "Recruitment Workflow Automation",
   "tracks": [
     "automation"
   ],
@@ -10,7 +10,6 @@
     "n8n"
   ],
   "context": "Personal project",
-  "contextDetail": "",
   "featured": true,
   "featuredOnHome": true,
   "summary": "End-to-end recruitment automation covering application intake, unique applicant IDs, CV extraction, HR notification, role-based scoring, shortlisting, interview scheduling and applicant communication.",
@@ -35,14 +34,12 @@
     "Interview Scheduling",
     "Applicant Communication"
   ],
-  "diagramImage": "",
-  "diagramAlt": "",
+  "diagramImage": "assets/uploads/Recuritmemnt tracker  orignal .png",
   "tools": [
     "n8n",
     "Google Forms",
     "Gmail"
   ],
-  "aiComponent": "",
   "results": [
     {
       "text": "Validated on a test cohort: ID generation, email delivery, CV extraction and scoring all worked correctly.",
@@ -61,12 +58,5 @@
     "before": "Manual intake, reading and replying. Hours per applicant.",
     "after": "Automated intake, scoring and reply. Minutes per applicant (projected)."
   },
-  "impact": "Faster, more consistent screening and quicker responses to candidates.",
-  "image": "",
-  "imageAlt": "",
-  "gallery": [],
-  "liveUrl": "",
-  "embedUrl": "",
-  "githubUrl": "",
-  "writeupUrl": ""
+  "impact": "Faster, more consistent screening and quicker responses to candidates."
 }

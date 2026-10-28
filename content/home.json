@@ -24,6 +24,7 @@
   "tracks": [
     {
       "key": "data-bi",
+      "eyebrow": "For analyst and BI roles",
       "title": "Data Analytics & BI",
       "summary": "Cleaning, validating and modelling data, then building the reports and dashboards leaders use.",
       "proof": [
@@ -38,11 +39,11 @@
         "Excel",
         "Power Query"
       ],
-      "cta": "Explore Data & BI",
-      "eyebrow": "For analyst and BI roles"
+      "cta": "Explore Data & BI"
     },
     {
       "key": "automation",
+      "eyebrow": "For automation roles",
       "title": "AI & Automation",
       "summary": "Replacing repetitive manual work with reliable, documented workflows.",
       "proof": [
@@ -57,15 +58,14 @@
         "Google Sheets",
         "Webhooks"
       ],
-      "cta": "Explore AI & Automation",
-      "eyebrow": "For automation roles"
+      "cta": "Explore AI & Automation"
     }
   ],
   "aboutHeading": "About me",
   "about": [
-    "I am an early-career data and business intelligence professional on the BI team at a microfinance bank in Lagos, with hands-on experience in reporting, data validation, process improvement and workflow automation.",
-    "My work involves turning raw data into business insight: cleaning and validating data, building dashboards, improving reporting processes, and spotting repetitive tasks that can be automated. I am deepening my automation skills with n8n, Make and Zapier through TS Academy's AI & Automation programme.",
-    "I enjoy solving business problems where analytical thinking, technology and process improvement meet."
+    "# From messy data to decisions people trust\n\nSomewhere in your business, someone is rebuilding the same report by hand right now, and still isn’t sure the numbers are right.",
+    "I’m a Data Analyst and Automation Specialist with nearly three years of experience across financial services and operations, and that’s the problem I solve.\n\nI clean and validate data at source, analyze it to uncover the patterns behind the numbers, and turn the findings into Power BI dashboards leaders act on. Then I automate the repetitive steps, so the right numbers arrive on time without anyone chasing them.",
+    "I’ve cut bottleneck identification from three days to same-day, built a customer database that helped recover 30-40% of dormant customers, and created a data collection system adopted across six departments. Today I prepare recurring regulatory reports in financial services.\n\nI work in SQL, Power BI and Power Query, and I’m certified in AI & Automation, building workflows in n8n and Make. I’m open to remote Data Analyst, BI and Automation Specialist roles."
   ],
   "flow": [
     "Data",

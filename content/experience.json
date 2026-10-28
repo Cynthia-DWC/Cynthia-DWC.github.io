@@ -1,0 +1,72 @@
+[
+  {
+    "published": true,
+    "role": "Data Analyst, BI Team",
+    "company": "Koins Microfinance Bank",
+    "location": "Lagos",
+    "type": "",
+    "start": "Feb 2026",
+    "end": "Present",
+    "bullets": [
+      { "text": "Reduced personal ETL processing and data preparation time by 85-90% through Power Query automation", "tracks": ["data-bi", "automation"] },
+      { "text": "Prepares 6+ recurring regulatory and operational reports on bi-weekly and monthly cycles", "tracks": ["data-bi"] },
+      { "text": "Consolidated metrics for the organisation's half-year management performance report", "tracks": ["data-bi"] },
+      { "text": "Built a SharePoint-based data collection system adopted by 6 departments", "tracks": ["data-bi", "automation"] }
+    ]
+  },
+  {
+    "published": false,
+    "role": "Data Analyst, Customer Operations",
+    "company": "Binxiang Project (Javiscam)",
+    "location": "Remote",
+    "type": "",
+    "start": "Jun 2025",
+    "end": "Oct 2025",
+    "bullets": [
+      { "text": "Analysed 300+ global technical support cases monthly to identify recurring issue patterns", "tracks": ["data-bi"] },
+      { "text": "Reduced issue resolution time by 15% through structured root-cause analysis", "tracks": ["data-bi"] },
+      { "text": "Delivered data insights to support teams across multiple time zones", "tracks": ["data-bi"] }
+    ]
+  },
+  {
+    "published": true,
+    "role": "Data Analyst, Operations Analytics",
+    "company": "DC Ikeja",
+    "location": "Lagos",
+    "type": "Contract",
+    "start": "Jan 2025",
+    "end": "Jan 2026",
+    "bullets": [
+      { "text": "Improved data accuracy from 76% to 97% through structured validation frameworks", "tracks": ["data-bi"] },
+      { "text": "Reduced bottleneck identification time from 3 days to same-day via weekly Power BI dashboards", "tracks": ["data-bi"] },
+      { "text": "Delivered monthly evaluation reports for internal team performance monitoring", "tracks": ["data-bi"] }
+    ]
+  },
+  {
+    "published": true,
+    "role": "Data Analyst, Customer Service & Sales Support",
+    "company": "Eleganza Industrial City",
+    "location": "Lagos",
+    "type": "",
+    "start": "Jan 2024",
+    "end": "May 2025",
+    "bullets": [
+      { "text": "Built a centralised customer database of 500+ records, enabling follow-up that recovered 30-40% of dormant customers", "tracks": ["data-bi"] },
+      { "text": "Developed Power BI dashboards used weekly by 7 senior leaders", "tracks": ["data-bi"] },
+      { "text": "Employee of the Month (twice)", "tracks": [] }
+    ]
+  },
+  {
+    "published": true,
+    "role": "Freelance Data Analyst, BI & Reporting Automation",
+    "company": "Self-employed",
+    "location": "Remote",
+    "type": "Freelance",
+    "start": "May 2024",
+    "end": "Present",
+    "bullets": [
+      { "text": "Deployed Power BI dashboards for multi-sector clients, cutting report turnaround by about 40%", "tracks": ["data-bi"] },
+      { "text": "Automated recurring reporting with Excel Power Query, saving 6-10 hours per client per cycle", "tracks": ["data-bi", "automation"] }
+    ]
+  }
+]

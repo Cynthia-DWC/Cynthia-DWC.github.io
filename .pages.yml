@@ -1,0 +1,309 @@
+# Pages CMS configuration: this file turns the content/ folder into editing forms at app.pagescms.org.
+# Rules for all text: no em dashes; leave a field empty to hide it on the site.
+
+media:
+  - name: images
+    label: Images
+    input: assets/uploads
+    output: assets/uploads
+    categories: [image]
+  - name: cv
+    label: CV files
+    input: assets/cv
+    output: assets/cv
+    categories: [document]
+
+content:
+  # ---------- Site settings ----------
+  - name: config
+    label: Site settings
+    type: file
+    path: content/config.json
+    format: json
+    fields:
+      - { name: name, label: Full name, type: string, required: true }
+      - { name: shortName, label: Short name, type: string }
+      - { name: brand, label: Brand name, type: string, description: "Shown in the top bar and footer, e.g. Data with Cynthia" }
+      - { name: title, label: Job title line, type: string }
+      - { name: tagline, label: Home page tagline, type: text }
+      - { name: location, label: Location and time zone, type: string }
+      - { name: availability, label: Availability line, type: string }
+      - { name: openTo, label: Open to (optional), type: string, description: "e.g. Full-time remote and contract roles. Leave empty to hide." }
+      - { name: email, label: Email, type: string, required: true }
+      - { name: linkedin, label: LinkedIn URL, type: string }
+      - { name: github, label: GitHub profile URL, type: string, description: "Leave empty to hide all GitHub links." }
+      - { name: headshot, label: Headshot photo, type: image, options: { media: images }, description: "Square photo, at least 440 x 440 px. Leave empty to hide." }
+      - name: cv
+        label: CV files
+        type: object
+        fields:
+          - { name: general, label: General CV (Home page), type: file, options: { media: cv }, description: "PDF. While empty, the site shows a Request my CV button instead." }
+          - { name: dataBi, label: Data & BI CV, type: file, options: { media: cv }, description: "Optional. Falls back to the General CV." }
+          - { name: automation, label: Automation CV, type: file, options: { media: cv }, description: "Optional. Falls back to the General CV." }
+      - { name: automationPageTitle, label: Automation page title, type: string, description: "e.g. AI & Automation, or Automation & Workflows" }
+      - { name: formspreeEndpoint, label: Formspree form URL, type: string, description: "e.g. https://formspree.io/f/abcdwxyz. Leave empty to show an email button instead of a form." }
+      - name: analytics
+        label: Analytics
+        type: object
+        fields:
+          - { name: goatcounterCode, label: GoatCounter code, type: string, description: "The part before .goatcounter.com. Leave empty to turn analytics off." }
+      - { name: lastUpdated, label: Last updated (footer), type: string, description: "e.g. Nov 2026" }
+
+  # ---------- Home page ----------
+  - name: home
+    label: Home page
+    type: file
+    path: content/home.json
+    format: json
+    fields:
+      - name: heroMetrics
+        label: Headline figures
+        type: object
+        list: true
+        fields:
+          - { name: value, label: Figure, type: string, description: "e.g. 76% → 97%" }
+          - { name: label, label: What it means, type: string }
+      - { name: tracksHeading, label: Specialisms heading, type: string }
+      - { name: tracksIntro, label: Specialisms intro, type: text }
+      - name: tracks
+        label: Specialism cards
+        type: object
+        list: true
+        fields:
+          - { name: key, label: Page, type: select, options: { values: [data-bi, automation] } }
+          - { name: eyebrow, label: Small label, type: string }
+          - { name: title, label: Title, type: string }
+          - { name: summary, label: Summary, type: text }
+          - { name: proof, label: Proof points, type: string, list: true }
+          - { name: tools, label: Tools, type: string, list: true }
+          - { name: cta, label: Button text, type: string }
+      - { name: aboutHeading, label: About heading, type: string }
+      - { name: about, label: About paragraphs, type: text, list: true }
+      - { name: flow, label: About flow steps, type: string, list: true }
+      - { name: howIWorkHeading, label: How I work heading, type: string }
+      - name: howIWork
+        label: How I work items
+        type: object
+        list: true
+        fields:
+          - { name: icon, label: Icon, type: select, options: { values: [message, doc, clock, check, power] } }
+          - { name: title, label: Title, type: string }
+          - { name: text, label: Text, type: text }
+      - { name: featuredHeading, label: Featured work heading, type: string }
+      - { name: featuredIntro, label: Featured work intro, type: text }
+      - { name: experienceHeading, label: Experience heading, type: string }
+      - { name: confidentialityNote, label: Confidentiality note, type: text }
+      - { name: certificationsHeading, label: Certifications heading, type: string }
+      - { name: writingHeading, label: Writing heading, type: string }
+      - { name: recommendationsHeading, label: Recommendations heading, type: string }
+      - { name: contactHeading, label: Contact heading, type: string }
+      - { name: contactText, label: Contact text, type: text }
+      - { name: cvHeading, label: CV strip heading, type: string }
+      - { name: cvText, label: CV strip text, type: text }
+
+  # ---------- Data & BI page ----------
+  - name: data-bi
+    label: Data & BI page
+    type: file
+    path: content/data-bi.json
+    format: json
+    fields:
+      - { name: eyebrow, label: Small label, type: string }
+      - { name: title, label: Page title, type: string }
+      - { name: tagline, label: Tagline, type: text }
+      - name: heroMetrics
+        label: Headline figures
+        type: object
+        list: true
+        fields:
+          - { name: value, label: Figure, type: string }
+          - { name: label, label: What it means, type: string }
+      - { name: capabilitiesHeading, label: Capabilities heading, type: string }
+      - name: capabilities
+        label: Capabilities
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: text, label: Text, type: text }
+      - { name: skillsHeading, label: Skills heading, type: string }
+      - { name: projectsHeading, label: Projects heading, type: string }
+      - { name: projectsIntro, label: Projects intro, type: text }
+      - { name: filters, label: Project filters, type: string, list: true, description: "Must match project tags exactly." }
+      - { name: experienceHeading, label: Experience heading, type: string }
+      - { name: certificationsHeading, label: Certifications heading, type: string }
+      - { name: contactHeading, label: Contact heading, type: string }
+      - { name: contactText, label: Contact text, type: text }
+
+  # ---------- Automation page ----------
+  - name: automation
+    label: Automation page
+    type: file
+    path: content/automation.json
+    format: json
+    fields:
+      - { name: eyebrow, label: Small label, type: string }
+      - { name: tagline, label: Tagline, type: text }
+      - name: heroMetrics
+        label: Headline figures
+        type: object
+        list: true
+        fields:
+          - { name: value, label: Figure, type: string }
+          - { name: label, label: What it means, type: string }
+      - { name: methodHeading, label: Method heading, type: string }
+      - { name: method, label: Method steps, type: string, list: true }
+      - { name: aiHeading, label: AI section heading, type: string }
+      - { name: aiIntro, label: AI section intro, type: text }
+      - { name: showcaseHeading, label: Showcase heading, type: string }
+      - { name: showcaseText, label: Showcase text, type: text }
+      - { name: skillsHeading, label: Skills heading, type: string }
+      - { name: projectsHeading, label: Projects heading, type: string }
+      - { name: projectsIntro, label: Projects intro, type: text }
+      - { name: filters, label: Project filters, type: string, list: true, description: "Must match project tags exactly." }
+      - { name: experienceHeading, label: Experience heading, type: string }
+      - { name: certificationsHeading, label: Certifications heading, type: string }
+      - { name: contactHeading, label: Contact heading, type: string }
+      - { name: contactText, label: Contact text, type: text }
+
+  # ---------- Projects ----------
+  - name: projects
+    label: Projects
+    type: file
+    path: content/projects.json
+    format: json
+    list: true
+    fields:
+      - { name: id, label: Short ID, type: string, required: true, description: "Lowercase with hyphens, no spaces, e.g. pharmacy-dashboard. Do not change after sharing links." }
+      - { name: published, label: Show on site, type: boolean, default: false, description: "Switch on when the project is ready." }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: tracks, label: Show on page, type: select, options: { values: [data-bi, automation], multiple: true } }
+      - { name: tags, label: Filter tags, type: select, options: { values: [Dashboards, "SQL & Data Cleaning", Reporting, n8n, Make, AI-assisted], multiple: true } }
+      - { name: context, label: Context, type: select, options: { values: [Professional, Personal project, Training programme, Data challenge] } }
+      - { name: contextDetail, label: Context detail, type: string, description: "e.g. TS Academy, or Onyx Data, February challenge" }
+      - { name: featured, label: Flagship on its page, type: boolean }
+      - { name: featuredOnHome, label: Feature on Home page, type: boolean }
+      - { name: summary, label: Card summary, type: text, description: "One or two sentences." }
+      - { name: problem, label: Business problem, type: text }
+      - { name: objective, label: Objective, type: text }
+      - { name: approach, label: Approach, type: text }
+      - { name: process, label: Process steps, type: string, list: true }
+      - { name: steps, label: Workflow diagram steps, type: string, list: true, description: "Leave empty for no diagram." }
+      - { name: tools, label: Tools, type: string, list: true }
+      - { name: aiComponent, label: Where AI is used, type: text, description: "Which model, what it does, how output is checked. Leave empty if no AI step." }
+      - name: results
+        label: Results
+        type: object
+        list: true
+        fields:
+          - { name: text, label: Result, type: string }
+          - { name: basis, label: Basis, type: select, options: { values: [measured, projected] } }
+      - name: beforeAfter
+        label: Before and after
+        type: object
+        fields:
+          - { name: before, label: Before, type: text }
+          - { name: after, label: After, type: text }
+      - { name: impact, label: Business impact, type: text }
+      - { name: image, label: Card screenshot, type: image, options: { media: images }, description: "16:9, about 1280 x 720 px. Public or synthetic data only." }
+      - { name: imageAlt, label: Screenshot description, type: string, description: "Describe what the screenshot shows, for screen readers." }
+      - name: gallery
+        label: Extra screenshots
+        type: object
+        list: true
+        fields:
+          - { name: src, label: Image, type: image, options: { media: images } }
+          - { name: alt, label: Description, type: string }
+      - { name: liveUrl, label: Live dashboard link, type: string }
+      - { name: embedUrl, label: Power BI embed link, type: string, description: "Publish to web link. Only for public datasets." }
+      - { name: githubUrl, label: Code link, type: string }
+      - { name: writeupUrl, label: Write-up link, type: string }
+
+  # ---------- Experience ----------
+  - name: experience
+    label: Experience
+    type: file
+    path: content/experience.json
+    format: json
+    list: true
+    fields:
+      - { name: published, label: Show on site, type: boolean, default: true }
+      - { name: role, label: Role, type: string }
+      - { name: company, label: Company, type: string }
+      - { name: location, label: Location, type: string }
+      - { name: type, label: Employment type, type: select, options: { values: [Full-time, Contract, Part-time, Freelance, Internship] } }
+      - { name: start, label: Start, type: string, description: "e.g. Feb 2026" }
+      - { name: end, label: End, type: string, description: "e.g. Present" }
+      - name: bullets
+        label: Achievements
+        type: object
+        list: true
+        fields:
+          - { name: text, label: Achievement, type: text }
+          - { name: tracks, label: Also show on, type: select, options: { values: [data-bi, automation], multiple: true } }
+
+  - name: education
+    label: Education
+    type: file
+    path: content/education.json
+    format: json
+    list: true
+    fields:
+      - { name: qualification, label: Qualification, type: string }
+      - { name: institution, label: Institution, type: string }
+      - { name: year, label: Year, type: string }
+
+  # ---------- Skills and credentials ----------
+  - name: skills
+    label: Skills
+    type: file
+    path: content/skills.json
+    format: json
+    list: true
+    fields:
+      - { name: group, label: Group name, type: string }
+      - { name: tracks, label: Show on page, type: select, options: { values: [data-bi, automation], multiple: true } }
+      - { name: items, label: Skills, type: string, list: true }
+
+  - name: certifications
+    label: Certifications
+    type: file
+    path: content/certifications.json
+    format: json
+    list: true
+    fields:
+      - { name: name, label: Name, type: string }
+      - { name: issuer, label: Issuer, type: string }
+      - { name: status, label: Status, type: select, options: { values: [completed, in progress] } }
+      - { name: note, label: Note, type: string, description: "e.g. Scholarship recipient" }
+      - { name: tracks, label: Show on page, type: select, options: { values: [data-bi, automation], multiple: true } }
+      - { name: url, label: Credential link, type: string }
+
+  # ---------- Writing and recommendations ----------
+  - name: writing
+    label: Writing
+    type: file
+    path: content/writing.json
+    format: json
+    list: true
+    fields:
+      - { name: title, label: Title, type: string }
+      - { name: platform, label: Platform, type: string, description: "e.g. LinkedIn" }
+      - { name: date, label: Date, type: string, description: "e.g. Oct 2026" }
+      - { name: url, label: Link, type: string }
+      - { name: summary, label: One-line summary, type: string }
+      - { name: tracks, label: Related page, type: select, options: { values: [data-bi, automation], multiple: true } }
+
+  - name: recommendations
+    label: Recommendations
+    type: file
+    path: content/recommendations.json
+    format: json
+    list: true
+    fields:
+      - { name: quote, label: Quote, type: text, description: "Real recommendations only, used with permission." }
+      - { name: name, label: Name, type: string }
+      - { name: role, label: Their role, type: string }
+      - { name: company, label: Company, type: string }
+      - { name: relationship, label: Relationship, type: string, description: "e.g. Managed Cynthia at DC Ikeja" }
+      - { name: sourceUrl, label: Source link, type: string }

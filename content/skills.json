@@ -1,0 +1,27 @@
+[
+  {
+    "group": "Data Analytics",
+    "tracks": ["data-bi"],
+    "items": ["Excel", "SQL (Joins, CTEs, Window Functions)", "MySQL", "Power Query", "Data Cleaning", "Data Validation", "Exploratory Data Analysis", "KPI Analysis", "Python (pandas, basic EDA)"]
+  },
+  {
+    "group": "Business Intelligence",
+    "tracks": ["data-bi"],
+    "items": ["Power BI", "DAX", "Data Modelling", "Dashboard Development", "Management Reporting", "KPI Dashboards", "Data Storytelling"]
+  },
+  {
+    "group": "Automation & Workflow",
+    "tracks": ["automation"],
+    "items": ["n8n", "Make", "Zapier", "Power Automate", "Trigger/Action Logic", "Multi-Path Workflows", "Error Handling", "Webhooks and HTTP Requests", "JavaScript in n8n Code nodes (basic)", "Google Sheets Automation", "Automated Notifications"]
+  },
+  {
+    "group": "Business & Operations",
+    "tracks": ["data-bi", "automation"],
+    "items": ["Operations Analytics", "Process Improvement", "CRM/ERP Systems", "Reporting Automation", "Data Quality", "Stakeholder Communication", "Cross-Functional Collaboration"]
+  },
+  {
+    "group": "Productivity",
+    "tracks": ["data-bi", "automation"],
+    "items": ["Microsoft 365", "SharePoint", "Google Workspace"]
+  }
+]

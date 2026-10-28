@@ -1,0 +1,10 @@
+[
+  { "name": "Data Analytics (Excel, SQL, Power BI)", "issuer": "TechCrush Academy", "status": "completed", "note": "", "tracks": ["data-bi"], "url": "" },
+  { "name": "SQL for Data Analysis", "issuer": "DataCamp", "status": "completed", "note": "", "tracks": ["data-bi"], "url": "" },
+  { "name": "Introduction to Python", "issuer": "DataCamp", "status": "completed", "note": "", "tracks": ["data-bi"], "url": "" },
+  { "name": "Data Fundamentals", "issuer": "Cisco Networking Academy", "status": "completed", "note": "", "tracks": ["data-bi"], "url": "" },
+  { "name": "Microsoft Office Suite Certification", "issuer": "", "status": "completed", "note": "", "tracks": ["data-bi", "automation"], "url": "" },
+  { "name": "AI & Automation Programme", "issuer": "TS Academy", "status": "in progress", "note": "Scholarship recipient", "tracks": ["automation"], "url": "" },
+  { "name": "PL-300: Power BI Data Analyst Associate", "issuer": "Microsoft", "status": "in progress", "note": "", "tracks": ["data-bi"], "url": "" },
+  { "name": "Google Data Analytics Certificate", "issuer": "Google", "status": "in progress", "note": "", "tracks": ["data-bi"], "url": "" }
+]

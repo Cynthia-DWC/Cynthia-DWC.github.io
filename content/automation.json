@@ -1,0 +1,30 @@
+{
+  "eyebrow": "AI & Workflow Automation",
+  "tagline": "I find repetitive manual work and replace it with reliable, documented workflows in n8n and Make, with error handling built in.",
+  "heroMetrics": [
+    { "value": "85-90%", "label": "Reduction in data preparation time via Power Query automation" },
+    { "value": "6-10 hrs", "label": "Saved per client per reporting cycle through automated reporting" },
+    { "value": "8 steps", "label": "Recruitment pipeline built and validated end to end" }
+  ],
+  "methodHeading": "How I build automations",
+  "method": [
+    "Find the manual bottleneck",
+    "Map the process",
+    "Build the workflow",
+    "Test with real cases",
+    "Add error handling and alerts",
+    "Document and hand over"
+  ],
+  "aiHeading": "Where AI fits in my workflows",
+  "aiIntro": "Each AI step below names the model it uses and how its output is checked.",
+  "showcaseHeading": "I Don't Just Analyse Processes. I Improve Them.",
+  "showcaseText": "I look for repetitive manual processes and design workflows that remove unnecessary human steps, with error handling so they keep running reliably.",
+  "skillsHeading": "Skills and tools",
+  "projectsHeading": "Projects",
+  "projectsIntro": "Workflows built in n8n and Make, from personal projects and TS Academy's AI & Automation programme.",
+  "filters": ["n8n", "Make", "AI-assisted"],
+  "experienceHeading": "Relevant experience",
+  "certificationsHeading": "Relevant certifications",
+  "contactHeading": "Have a process your team repeats every week?",
+  "contactText": "I am open to remote Automation Specialist and workflow automation roles."
+}

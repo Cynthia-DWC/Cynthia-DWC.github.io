@@ -1,0 +1,105 @@
+{
+  "heroMetrics": [
+    {
+      "value": "76% → 97%",
+      "label": "Data accuracy improved through validation frameworks"
+    },
+    {
+      "value": "85-90%",
+      "label": "Reduction in data preparation time via Power Query automation"
+    },
+    {
+      "value": "6 departments",
+      "label": "Adopted a SharePoint data collection system I built"
+    }
+  ],
+  "tracksHeading": "Two specialisms that work together",
+  "tracksIntro": "Reliable data tells a business what is happening. Automation frees people from the repetitive work around it. I do both.",
+  "tracks": [
+    {
+      "key": "data-bi",
+      "title": "Data Analytics & BI",
+      "summary": "Cleaning, validating and modelling data, then building the reports and dashboards leaders use.",
+      "proof": [
+        "Data accuracy improved from 76% to 97%",
+        "Bottleneck identification cut from 3 days to same day",
+        "Power BI dashboards used weekly by 7 senior leaders"
+      ],
+      "tools": [
+        "SQL",
+        "Power BI",
+        "DAX",
+        "Excel",
+        "Power Query"
+      ],
+      "cta": "Explore Data & BI",
+      "eyebrow": "For analyst and BI roles"
+    },
+    {
+      "key": "automation",
+      "title": "AI & Automation",
+      "summary": "Replacing repetitive manual work with reliable, documented workflows.",
+      "proof": [
+        "85-90% less data preparation time through automation",
+        "6-10 hours saved per client per reporting cycle",
+        "8-step recruitment pipeline validated end to end"
+      ],
+      "tools": [
+        "n8n",
+        "Make",
+        "Zapier",
+        "Google Sheets",
+        "Webhooks"
+      ],
+      "cta": "Explore AI & Automation",
+      "eyebrow": "For automation roles"
+    }
+  ],
+  "aboutHeading": "About me",
+  "about": [
+    "I am an early-career data and business intelligence professional on the BI team at a microfinance bank in Lagos, with hands-on experience in reporting, data validation, process improvement and workflow automation.",
+    "My work involves turning raw data into business insight: cleaning and validating data, building dashboards, improving reporting processes, and spotting repetitive tasks that can be automated. I am deepening my automation skills with n8n, Make and Zapier through TS Academy's AI & Automation programme.",
+    "I enjoy solving business problems where analytical thinking, technology and process improvement meet."
+  ],
+  "flow": [
+    "Data",
+    "Analysis",
+    "Insight",
+    "Automation",
+    "Business Impact"
+  ],
+  "howIWorkHeading": "How I work with remote teams",
+  "howIWork": [
+    {
+      "icon": "message",
+      "title": "Async-first communication",
+      "text": "Clear written updates and documented handovers."
+    },
+    {
+      "icon": "doc",
+      "title": "Documentation by default",
+      "text": "Every report, pipeline and workflow is written up so others can run it."
+    },
+    {
+      "icon": "clock",
+      "title": "Time-zone overlap",
+      "text": "Based in GMT+1, comfortable working with teams from UTC-5 to UTC+5."
+    },
+    {
+      "icon": "check",
+      "title": "Accuracy before speed",
+      "text": "Data is validated at source before it reaches a report."
+    }
+  ],
+  "featuredHeading": "Featured work",
+  "featuredIntro": "One flagship project from each specialism. Each page has the full set.",
+  "experienceHeading": "Experience",
+  "confidentialityNote": "Employer work is described without client or internal data. Project screenshots use public or synthetic datasets.",
+  "certificationsHeading": "Certifications and learning",
+  "writingHeading": "Writing",
+  "recommendationsHeading": "Recommendations",
+  "contactHeading": "Let's Build Something Better With Data",
+  "contactText": "Hiring for a data, BI or automation role, or have a process your team repeats every week? Send me a message.",
+  "cvHeading": "Interested in my experience?",
+  "cvText": "Download my CV to explore my work across data analytics, business intelligence, reporting, operations and workflow automation."
+}

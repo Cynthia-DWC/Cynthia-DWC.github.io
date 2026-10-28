@@ -1,0 +1,25 @@
+{
+  "eyebrow": "Data Analytics & Business Intelligence",
+  "title": "Data Analytics & Business Intelligence",
+  "tagline": "I clean, validate and model data, then build the reports and dashboards leaders use to make decisions.",
+  "heroMetrics": [
+    { "value": "76% → 97%", "label": "Data accuracy improved through validation frameworks" },
+    { "value": "3 days → same day", "label": "Bottleneck identification via weekly Power BI dashboards" },
+    { "value": "7 senior leaders", "label": "Used my Power BI dashboards weekly" }
+  ],
+  "capabilitiesHeading": "What I do",
+  "capabilities": [
+    { "title": "Data cleaning and validation", "text": "Deduplication, standardisation, validation frameworks and reconciliation." },
+    { "title": "Data modelling and DAX", "text": "Star schemas, relationships and measures in Power BI." },
+    { "title": "Dashboards and KPI reporting", "text": "Power BI dashboards for operational and management audiences." },
+    { "title": "Recurring and regulatory reporting", "text": "Bi-weekly and monthly report cycles and management performance reporting." }
+  ],
+  "skillsHeading": "Skills and tools",
+  "projectsHeading": "Projects",
+  "projectsIntro": "Dashboards, cleaning pipelines and analysis built on public or synthetic data.",
+  "filters": ["Dashboards", "SQL & Data Cleaning", "Reporting"],
+  "experienceHeading": "Relevant experience",
+  "certificationsHeading": "Relevant certifications",
+  "contactHeading": "Need someone who makes your data reliable and readable?",
+  "contactText": "I am open to remote Data Analyst, BI Analyst and Reporting Analyst roles."
+}

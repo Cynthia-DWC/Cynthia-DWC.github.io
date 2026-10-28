@@ -2,15 +2,21 @@
   "heroMetrics": [
     {
       "value": "76% → 97%",
-      "label": "Data accuracy improved through validation frameworks"
+      "label": "Data accuracy improved through validation frameworks",
+      "tag": "Data quality",
+      "track": "data-bi"
+    },
+    {
+      "value": "7 senior leaders",
+      "label": "Used my Power BI dashboards every week",
+      "tag": "Business intelligence",
+      "track": "data-bi"
     },
     {
       "value": "85-90%",
-      "label": "Reduction in data preparation time via Power Query automation"
-    },
-    {
-      "value": "6 departments",
-      "label": "Adopted a SharePoint data collection system I built"
+      "label": "Less data preparation time through Power Query automation",
+      "tag": "Automation",
+      "track": "automation"
     }
   ],
   "tracksHeading": "Two specialisms that work together",

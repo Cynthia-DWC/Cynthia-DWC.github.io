@@ -545,3 +545,56 @@ body::before {
   .hero-pipeline .draw { stroke-dashoffset: 0; }
   .reveal, .flow.is-staged .flow-step { opacity: 1 !important; transform: none !important; }
 }
+
+/* Hero layout: full-bleed portrait (Home) */
+.hero--portrait .hero-text { max-width: 640px; }
+.hero--portrait .hero-role { font-size: clamp(0.78rem, 1.05vw, 0.86rem); }
+.hero-portrait {
+  position: absolute; top: 0; right: 0; z-index: 0; overflow: hidden;
+  width: min(46%, 720px); height: clamp(560px, 46vw, 700px);
+}
+.hero-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 18%; }
+.hero-portrait::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background:
+    linear-gradient(to right, var(--navy-900) 0%, rgba(12, 26, 46, 0.6) 20%, rgba(12, 26, 46, 0) 48%),
+    linear-gradient(to top, var(--navy-900) 2%, rgba(12, 26, 46, 0) 42%);
+}
+.hero--portrait .kpis { position: relative; margin-top: clamp(3rem, 6vw, 4.5rem); }
+@media (max-width: 860px) {
+  .hero--portrait { padding-top: calc(var(--header-h) + env(safe-area-inset-top, 0px)); }
+  .hero-portrait { position: relative; width: auto; height: 330px; margin-bottom: -48px; }
+  .hero-portrait img { object-position: center 10%; }
+  .hero-portrait::after { background: linear-gradient(to top, var(--navy-900) 4%, rgba(12, 26, 46, 0.55) 30%, rgba(12, 26, 46, 0) 60%); }
+  .hero--portrait .hero-text { max-width: none; }
+}
+
+/* Hero layout: profile card (specialist pages) */
+.hero-grid.has-card { grid-template-columns: minmax(0, 1fr) 320px; gap: clamp(2rem, 5vw, 4.5rem); }
+.hero-card {
+  background: var(--navy-800); border: 1px solid var(--line-navy); border-radius: 16px; padding: 10px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35); min-width: 0;
+}
+.hero-card-photo { aspect-ratio: 4 / 5; border-radius: 10px; overflow: hidden; border-bottom: 3px solid var(--accent-bright); }
+.hero-card-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; }
+.hero-card-dl { margin: 0; padding: 14px 8px 6px; display: grid; gap: 10px; }
+.hero-card-dl div { display: grid; grid-template-columns: 62px minmax(0, 1fr); gap: 8px; align-items: baseline; }
+.hero-card-dl dt { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--on-navy-2); }
+.hero-card-dl dd { margin: 0; font-size: 0.88rem; display: flex; align-items: center; gap: 8px; min-width: 0; overflow-wrap: anywhere; }
+.hero-card-dl a { color: var(--on-navy); text-decoration-color: var(--line-navy); text-underline-offset: 3px; }
+.hero-card-dl .dot { flex: none; width: 7px; height: 7px; border-radius: 50%; background: var(--teal); box-shadow: 0 0 0 3px rgba(94, 196, 188, 0.2); }
+@media (max-width: 860px) {
+  .hero-grid.has-card { grid-template-columns: minmax(0, 1fr); gap: var(--s5); }
+  .hero-card { order: -1; display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 14px; align-items: center; padding: 10px; }
+  .hero-card-photo { aspect-ratio: 1; border-radius: 8px; border-bottom-width: 2px; }
+  .hero-card-dl { padding: 0; gap: 6px; }
+  .hero-card-dl div { grid-template-columns: minmax(0, 1fr); }
+  .hero-card-dl dt { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .hero-card-dl dd { font-size: 0.84rem; }
+}
+
+/* KPI tags show which specialism each figure proves */
+.kpi-tag { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--on-navy-2); display: flex; align-items: center; gap: 8px; }
+.kpi-tag::before { content: ""; width: 8px; height: 8px; border-radius: 2px; background: var(--accent-bright, var(--gold)); }
+.kpi[data-track="data-bi"] .kpi-tag::before { background: var(--teal); }
+.kpi[data-track="automation"] .kpi-tag::before { background: var(--blue); }

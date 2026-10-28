@@ -1,7 +1,7 @@
 // Specialist pages: Data Analytics & BI, and AI & Automation. One renderer, two configurations.
 import { esc, has, published, onTrack, counter } from './util.js';
 import { sectionHead, flowList, relevantExperience, cvLink } from './components.js';
-import { hero, heroMeta, projectsSection, certificationsSection, trackContactStrip } from './sections.js';
+import { hero, projectsSection, certificationsSection, trackContactStrip } from './sections.js';
 import { heroPipeline, heroStarSchema } from './diagrams.js';
 
 export function trackSubnav(page, data) {
@@ -27,13 +27,19 @@ export function renderTrack(page, data) {
     title,
     role: config.name,
     tagline: t.tagline,
-    meta: heroMeta(config),
     actions: `
       <a class="btn btn--gold" href="#projects">${isAuto ? 'See Workflows' : 'See Projects'}</a>
       ${cvLink(config, isAuto ? 'automation' : 'dataBi', 'btn btn--ghost', cvLabel)}`,
     metrics: t.heroMetrics,
     bg: isAuto ? (flagship ? heroPipeline(flagship.steps) : '') : heroStarSchema(),
-    photo: config.headshot
+    photo: config.headshot,
+    layout: 'card',
+    portrait: config.portrait,
+    card: [
+      ['Status', esc(config.availability), true],
+      ['Based in', esc(config.location)],
+      ['Hours', esc(config.overlap || '')]
+    ]
   });
 
   let out = `<div id="overview">${heroHtml}</div>`;

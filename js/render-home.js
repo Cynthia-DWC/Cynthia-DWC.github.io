@@ -20,7 +20,8 @@ export function renderHome(data) {
       <a class="btn btn--gold" href="${esc(pageHref('data-bi'))}">View Data & BI Work</a>
       <a class="btn btn--ghost" href="${esc(pageHref('automation'))}">View Automation Work</a>`,
     metrics: home.heroMetrics,
-    bg: flagship ? heroPipeline(flagship.steps) : '',
+    layout: 'portrait',
+    portrait: config.portrait,
     photo: config.headshot
   });
 

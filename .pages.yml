@@ -28,11 +28,13 @@ content:
       - { name: tagline, label: Home page tagline, type: text }
       - { name: location, label: Location and time zone, type: string }
       - { name: availability, label: Availability line, type: string }
+      - { name: overlap, label: Time-zone overlap (profile card), type: string, description: "e.g. Overlaps UTC-5 to UTC+5. Leave empty to hide." }
       - { name: openTo, label: Open to (optional), type: string, description: "e.g. Full-time remote and contract roles. Leave empty to hide." }
       - { name: email, label: Email, type: string, required: true }
       - { name: linkedin, label: LinkedIn URL, type: string }
       - { name: github, label: GitHub profile URL, type: string, description: "Leave empty to hide all GitHub links." }
-      - { name: headshot, label: Headshot photo, type: image, options: { media: images }, description: "Square photo, at least 440 x 440 px. Leave empty to hide." }
+      - { name: headshot, label: Headshot photo, type: image, options: { media: images }, description: "Square crop, at least 440 x 440 px. Used where a round photo is needed." }
+      - { name: portrait, label: Portrait photo, type: image, options: { media: images }, description: "Tall 4:5 crop, about 800 x 1000 px, face in the upper third. Used in the Home hero and the profile cards. Falls back to the headshot." }
       - name: cv
         label: CV files
         type: object
@@ -63,6 +65,8 @@ content:
         fields:
           - { name: value, label: Figure, type: string, description: "e.g. 76% → 97%" }
           - { name: label, label: What it means, type: string }
+          - { name: tag, label: Small label (optional), type: string, description: "e.g. Data quality, Business intelligence, Automation" }
+          - { name: track, label: Colour, type: select, options: { values: [data-bi, automation] }, description: "Teal for Data & BI, blue for Automation" }
       - { name: tracksHeading, label: Specialisms heading, type: string }
       - { name: tracksIntro, label: Specialisms intro, type: text }
       - name: tracks

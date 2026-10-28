@@ -2,11 +2,21 @@
 import { esc, has, asset, ICONS } from './util.js';
 import { sectionHead, kpiTiles, projectCard, certifications, cvLink, emailCopy } from './components.js';
 
-export function hero({ track, eyebrow, title, role, tagline, meta, actions, metrics, bg, photo }) {
+export function hero({ track, eyebrow, title, role, tagline, meta, actions, metrics, bg, photo, layout = 'circle', portrait, card }) {
+  const portraitSrc = portrait || photo;
+  const usePortrait = layout === 'portrait' && portraitSrc;
+  const useCard = layout === 'card' && (portraitSrc || (card || []).length);
+  const useCircle = layout === 'circle' && photo;
+  const cardHtml = useCard ? `
+    <aside class="hero-card" aria-label="Profile">
+      ${portraitSrc ? `<div class="hero-card-photo"><img src="${esc(asset(portraitSrc))}" alt="Portrait of ${esc(role || title)}" width="800" height="1000"></div>` : ''}
+      <dl class="hero-card-dl">${(card || []).filter((c) => has(c[1])).map(([k, v, dot]) => `<div><dt>${esc(k)}</dt><dd>${dot ? '<span class="dot" aria-hidden="true"></span>' : ''}${v}</dd></div>`).join('')}</dl>
+    </aside>` : '';
   return `
-    <section class="hero" data-tone="dark"${track ? ` data-track="${esc(track)}"` : ''} aria-labelledby="heroTitle">
+    <section class="hero${usePortrait ? ' hero--portrait' : ''}${useCard ? ' hero--card' : ''}" data-tone="dark"${track ? ` data-track="${esc(track)}"` : ''} aria-labelledby="heroTitle">
+      ${usePortrait ? `<div class="hero-portrait"><img src="${esc(asset(portraitSrc))}" alt="Portrait of ${esc(title)}" width="800" height="1000" fetchpriority="high"></div>` : ''}
       <div class="wrap">
-        <div class="hero-grid${photo ? ' has-photo' : ''}">
+        <div class="hero-grid${useCircle ? ' has-photo' : ''}${useCard ? ' has-card' : ''}">
           <div class="hero-text">
             ${has(eyebrow) ? `<p class="eyebrow"><span class="mono">${esc(eyebrow)}</span></p>` : ''}
             <h1 class="hero-title" id="heroTitle">${esc(title)}</h1>
@@ -15,7 +25,8 @@ export function hero({ track, eyebrow, title, role, tagline, meta, actions, metr
             ${meta ? `<p class="hero-meta">${meta}</p>` : ''}
             <div class="hero-actions">${actions}</div>
           </div>
-          ${photo ? `<div class="hero-photo"><img src="${esc(asset(photo))}" alt="Portrait of ${esc(title)}" width="440" height="440"></div>` : ''}
+          ${useCircle ? `<div class="hero-photo"><img src="${esc(asset(photo))}" alt="Portrait of ${esc(title)}" width="440" height="440"></div>` : ''}
+          ${cardHtml}
         </div>
         ${bg ? `<div class="hero-pipeline" aria-hidden="true">${bg}</div>` : ''}
         ${kpiTiles(metrics)}

@@ -17,7 +17,8 @@ export function kpiTiles(metrics) {
   const items = (metrics || []).filter((m) => has(m?.value));
   if (!items.length) return '';
   return `<div class="kpis" role="list">${items.map((m) => `
-    <div class="kpi" role="listitem">
+    <div class="kpi" role="listitem"${has(m.track) ? ` data-track="${esc(m.track)}"` : ''}>
+      ${has(m.tag) ? `<p class="kpi-tag">${esc(m.tag)}</p>` : ''}
       <p class="kpi-value${String(m.value).length > 11 ? ' kpi-value--long' : ''}" data-countup>${esc(m.value)}</p>
       <p class="kpi-label">${esc(m.label)}</p>
     </div>`).join('')}</div>`;

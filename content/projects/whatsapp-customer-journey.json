@@ -21,6 +21,8 @@
     "Caught and fixed production bugs"
   ],
   "steps": [],
+  "diagramImage": "",
+  "diagramAlt": "",
   "tools": [
     "n8n",
     "Webhooks",

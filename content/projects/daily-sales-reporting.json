@@ -30,6 +30,8 @@
     "Aggregator",
     "Gmail"
   ],
+  "diagramImage": "",
+  "diagramAlt": "",
   "tools": [
     "Google Sheets",
     "Gmail"

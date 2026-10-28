@@ -198,7 +198,9 @@ content:
       - { name: objective, label: Objective, type: text }
       - { name: approach, label: Approach, type: text }
       - { name: process, label: Process steps, type: string, list: true }
-      - { name: steps, label: Workflow diagram steps, type: string, list: true, description: "Leave empty for no diagram." }
+      - { name: steps, label: Workflow diagram steps (typed), type: string, list: true, description: "Type each step in order, e.g. Form Submission, then Filtering. The site draws the diagram for you. Leave empty for none." }
+      - { name: diagramImage, label: Workflow diagram image (upload), type: image, options: { media: images }, description: "Upload a screenshot of your n8n or Make canvas, or a diagram you drew. Shown in the case study. Remove any names, emails or keys first." }
+      - { name: diagramAlt, label: Diagram image description, type: string, description: "e.g. n8n canvas showing the 8-step recruitment workflow" }
       - { name: tools, label: Tools, type: string, list: true }
       - { name: aiComponent, label: Where AI is used, type: text, description: "Which model, what it does, how output is checked. Leave empty if no AI step." }
       - name: results
@@ -215,7 +217,7 @@ content:
           - { name: before, label: Before, type: text }
           - { name: after, label: After, type: text }
       - { name: impact, label: Business impact, type: text }
-      - { name: image, label: Card screenshot, type: image, options: { media: images }, description: "16:9, about 1280 x 720 px. Public or synthetic data only." }
+      - { name: image, label: Card screenshot (upload), type: image, options: { media: images }, description: "Main image for the project card. 16:9, about 1280 x 720 px. Public or synthetic data only." }
       - { name: imageAlt, label: Screenshot description, type: string, description: "Describe what the screenshot shows, for screen readers." }
       - name: gallery
         label: Extra screenshots

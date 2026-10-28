@@ -31,6 +31,8 @@
     "Clean & Standardise Transactions",
     "Output"
   ],
+  "diagramImage": "",
+  "diagramAlt": "",
   "tools": [
     "n8n",
     "JavaScript (Code nodes)"

@@ -35,6 +35,8 @@
     "Interview Scheduling",
     "Applicant Communication"
   ],
+  "diagramImage": "",
+  "diagramAlt": "",
   "tools": [
     "n8n",
     "Google Forms",

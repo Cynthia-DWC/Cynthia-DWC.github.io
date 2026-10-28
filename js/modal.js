@@ -30,7 +30,10 @@ function body(p) {
     row('Approach', para(p.approach)),
     row('Tools', tools.length ? `<ul class="tags">${tools.map((t) => `<li class="tag">${esc(t)}</li>`).join('')}</ul>` : ''),
     row('Process', process.length ? `<ol>${process.map((s) => `<li>${esc(s)}</li>`).join('')}</ol>` : ''),
-    row('Workflow', steps.length ? `<div class="cs-flow">${flowList(steps, { staged: false })}</div>` : ''),
+    row('Workflow', [
+      has(p.diagramImage) ? `<a href="${esc(asset(p.diagramImage))}" target="_blank" rel="noopener" class="cs-diagram"><img src="${esc(asset(p.diagramImage))}" alt="${esc(p.diagramAlt || 'Workflow diagram')}" loading="lazy"></a>` : '',
+      steps.length ? `<div class="cs-flow">${flowList(steps, { staged: false })}</div>` : ''
+    ].join('')),
     row('Where AI is used', para(p.aiComponent)),
     row('Before and after', has(ba.before) || has(ba.after) ? `<div class="ba">
         ${has(ba.before) ? `<div class="ba-panel"><span class="mono">Before</span><p>${esc(ba.before)}</p></div>` : ''}

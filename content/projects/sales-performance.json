@@ -25,6 +25,8 @@
     "Built Power BI dashboards for revenue trends and performance drivers"
   ],
   "steps": [],
+  "diagramImage": "",
+  "diagramAlt": "",
   "tools": [
     "SQL",
     "Excel",

@@ -598,3 +598,8 @@ body::before {
 .kpi-tag::before { content: ""; width: 8px; height: 8px; border-radius: 2px; background: var(--accent-bright, var(--gold)); }
 .kpi[data-track="data-bi"] .kpi-tag::before { background: var(--teal); }
 .kpi[data-track="automation"] .kpi-tag::before { background: var(--blue); }
+
+/* Uploaded workflow diagram in case studies */
+.cs-diagram { display: block; border: 1px solid var(--line); border-radius: var(--r-sm); overflow: hidden; background: var(--card); }
+.cs-diagram img { width: 100%; height: auto; }
+.cs-flow .flow-label { color: var(--on-navy); }

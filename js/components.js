@@ -63,8 +63,10 @@ export function fallbackVisual(p, primaryTrack) {
 
 export function projectCard(p, primaryTrack) {
   const t = primaryTrack || (p.tracks || [])[0] || '';
-  const visual = has(p.image)
-    ? `<img src="${esc(asset(p.image))}" alt="${esc(p.imageAlt || '')}" loading="lazy" width="1280" height="720">`
+  const cardImg = has(p.image) ? p.image : p.diagramImage;
+  const cardAlt = has(p.image) ? p.imageAlt : p.diagramAlt;
+  const visual = has(cardImg)
+    ? `<img src="${esc(asset(cardImg))}" alt="${esc(cardAlt || '')}" loading="lazy" width="1280" height="720">`
     : fallbackVisual(p, t);
   const tags = strs(p.tools).slice(0, 5);
   return `

@@ -1,7 +1,7 @@
 // Home page (General).
 import { esc, has, pageHref, published, counter, ICONS } from './util.js';
-import { sectionHead, chips, projectCard, timeline } from './components.js';
-import { hero, heroMeta, contactSection, certificationsSection, confidentialityNote } from './sections.js';
+import { sectionHead, chips, projectCard, timeline, trackLabel } from './components.js';
+import { hero, heroMeta, contactSection, certificationsSection, confidentialityNote, projectsSection } from './sections.js';
 import { heroPipeline } from './diagrams.js';
 
 export function renderHome(data) {
@@ -66,14 +66,13 @@ export function renderHome(data) {
       </div>
     </section>` : '';
 
-  const featured = projects.filter((p) => p.featuredOnHome);
-  const featuredHtml = featured.length ? `
-    <section class="band band--white" id="featured" data-tone="light">
-      <div class="wrap">
-        ${sectionHead({ num: n(), eyebrow: 'Selected work', title: home.featuredHeading, intro: home.featuredIntro })}
-        <ul class="proj-grid">${featured.map((p) => `<li>${projectCard(p)}</li>`).join('')}</ul>
-      </div>
-    </section>` : '';
+  // Home shows every published project: Home flagships first, then by display order.
+  const homeProjects = [...projects].sort((a, b) => (b.featuredOnHome ? 1 : 0) - (a.featuredOnHome ? 1 : 0));
+  const featuredHtml = projectsSection({
+    id: 'featured', num: n(), eyebrow: 'Selected work', title: home.featuredHeading, intro: home.featuredIntro,
+    projects: homeProjects, filters: ['Data & BI', 'Automation'], tone: 'band--white',
+    filterOf: (p) => (p.tracks || []).map(trackLabel)
+  });
 
   const exp = published(data.experience);
   const edu = (data.education || []).filter((e) => has(e.qualification));

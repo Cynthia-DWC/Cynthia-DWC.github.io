@@ -40,9 +40,9 @@ export function heroMeta(config) {
   return parts.join('');
 }
 
-export function projectsSection({ id, num, eyebrow, title, intro, projects, track, filters, tone = 'band--paper' }) {
+export function projectsSection({ id, num, eyebrow, title, intro, projects, track, filters, tone = 'band--paper', filterOf = (p) => p.tags || [] }) {
   if (!projects.length) return '';
-  const usable = (filters || []).filter((f) => projects.some((p) => (p.tags || []).includes(f)));
+  const usable = (filters || []).filter((f) => projects.some((p) => filterOf(p).includes(f)));
   const filterBar = usable.length
     ? `<div class="filters" role="group" aria-label="Filter projects">
         <button type="button" class="filter" aria-pressed="true" data-filter="all">All</button>
@@ -55,7 +55,7 @@ export function projectsSection({ id, num, eyebrow, title, intro, projects, trac
         ${sectionHead({ num, eyebrow, title, intro })}
         ${filterBar}
         <ul class="proj-grid" data-grid>
-          ${projects.map((p) => `<li data-tags="${esc((p.tags || []).join('|'))}">${projectCard(p, track)}</li>`).join('')}
+          ${projects.map((p) => `<li data-tags="${esc(filterOf(p).join('|'))}">${projectCard(p, track)}</li>`).join('')}
         </ul>
       </div>
     </section>`;

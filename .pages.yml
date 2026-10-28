@@ -191,8 +191,8 @@ content:
       - { name: tags, label: Filter tags, type: select, options: { values: [Dashboards, "SQL & Data Cleaning", Reporting, n8n, Make, AI-assisted], multiple: true } }
       - { name: context, label: Context, type: select, options: { values: [Professional, Personal project, Training programme, Data challenge] } }
       - { name: contextDetail, label: Context detail, type: string, description: "e.g. TS Academy, or Onyx Data, February challenge" }
-      - { name: featured, label: Flagship on its page, type: boolean }
-      - { name: featuredOnHome, label: Feature on Home page, type: boolean }
+      - { name: featured, label: Featured (Flagship badge), type: boolean, description: "Adds the gold Flagship badge and leads the workflow showcase on its page." }
+      - { name: featuredOnHome, label: Featured on Home (shows first), type: boolean, description: "Every published project shows on Home. Featured ones show first." }
       - { name: summary, label: Card summary, type: text, description: "One or two sentences." }
       - { name: problem, label: Business problem, type: text }
       - { name: objective, label: Objective, type: text }

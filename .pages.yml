@@ -171,16 +171,22 @@ content:
       - { name: contactText, label: Contact text, type: text }
 
   # ---------- Projects ----------
+  # One file per project in content/projects/. The deploy step combines them into content/projects.json.
   - name: projects
     label: Projects
-    type: file
-    path: content/projects.json
+    type: collection
+    path: content/projects
     format: json
-    list: true
+    filename: "{fields.id}.json"
+    view:
+      fields: [title, published, order]
+      primary: title
+      sort: [order, title]
     fields:
-      - { name: id, label: Short ID, type: string, required: true, description: "Lowercase with hyphens, no spaces, e.g. pharmacy-dashboard. Do not change after sharing links." }
-      - { name: published, label: Show on site, type: boolean, default: false, description: "Switch on when the project is ready." }
       - { name: title, label: Title, type: string, required: true }
+      - { name: id, label: Short ID, type: string, required: true, pattern: { regex: "^[a-z0-9-]+$", message: "Use lowercase letters, numbers and hyphens only" }, description: "e.g. pharmacy-dashboard. Becomes the file name and the case study link. Do not change after sharing links." }
+      - { name: order, label: Display order, type: number, description: "1 shows first. Projects are sorted by this number." }
+      - { name: published, label: Show on site, type: boolean, default: false, description: "Switch on when the project is ready." }
       - { name: tracks, label: Show on page, type: select, options: { values: [data-bi, automation], multiple: true } }
       - { name: tags, label: Filter tags, type: select, options: { values: [Dashboards, "SQL & Data Cleaning", Reporting, n8n, Make, AI-assisted], multiple: true } }
       - { name: context, label: Context, type: select, options: { values: [Professional, Personal project, Training programme, Data challenge] } }

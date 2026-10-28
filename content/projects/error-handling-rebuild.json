@@ -1,0 +1,44 @@
+{
+  "id": "error-handling-rebuild",
+  "order": 9,
+  "published": true,
+  "title": "Workflow Rebuild with Error Handling",
+  "tracks": [
+    "automation"
+  ],
+  "tags": [],
+  "context": "",
+  "contextDetail": "",
+  "featured": false,
+  "featuredOnHome": false,
+  "summary": "Rebuilt an existing automation independently, adding structured error triggers and automated alerts so failures are caught and reported immediately.",
+  "problem": "An automation without error handling can fail silently.",
+  "objective": "Rebuild the workflow so that every failure is caught and reported straight away.",
+  "approach": "Rebuilt the automation independently, then added structured error triggers and automated alert notifications.",
+  "process": [
+    "Rebuilt the existing automation independently",
+    "Added structured error triggers",
+    "Added automated alert notifications"
+  ],
+  "steps": [
+    "Trigger",
+    "Main Workflow",
+    "Error Trigger",
+    "Alert Notification"
+  ],
+  "tools": [],
+  "aiComponent": "",
+  "results": [],
+  "beforeAfter": {
+    "before": "",
+    "after": ""
+  },
+  "impact": "Failures are caught and communicated immediately.",
+  "image": "",
+  "imageAlt": "",
+  "gallery": [],
+  "liveUrl": "",
+  "embedUrl": "",
+  "githubUrl": "",
+  "writeupUrl": ""
+}

@@ -1,0 +1,50 @@
+{
+  "id": "event-registration",
+  "order": 7,
+  "published": true,
+  "title": "Event Registration Automation",
+  "tracks": [
+    "automation"
+  ],
+  "tags": [
+    "Make"
+  ],
+  "context": "Training programme",
+  "contextDetail": "TS Academy",
+  "featured": false,
+  "featuredOnHome": false,
+  "summary": "Multi-path automation covering the full registration lifecycle with filtering, conditional routing, confirmation and reminder emails.",
+  "problem": "Manual registration follow-up is slow and easy to get wrong.",
+  "objective": "Handle registrations from submission to reminder without manual follow-up.",
+  "approach": "Built a multi-path scenario in Make with filters and conditional routing.",
+  "process": [
+    "Captured form submissions",
+    "Filtered and routed registrations by condition",
+    "Sent confirmation emails",
+    "Sent reminder emails"
+  ],
+  "steps": [
+    "Form Submission",
+    "Filtering",
+    "Conditional Routing",
+    "Confirmation Email",
+    "Reminder Email"
+  ],
+  "tools": [
+    "Make"
+  ],
+  "aiComponent": "",
+  "results": [],
+  "beforeAfter": {
+    "before": "",
+    "after": ""
+  },
+  "impact": "Removes manual follow-up from the registration process.",
+  "image": "",
+  "imageAlt": "",
+  "gallery": [],
+  "liveUrl": "",
+  "embedUrl": "",
+  "githubUrl": "",
+  "writeupUrl": ""
+}

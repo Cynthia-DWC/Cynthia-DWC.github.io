@@ -1,0 +1,43 @@
+{
+  "id": "pharmacy-dashboard",
+  "order": 1,
+  "published": true,
+  "title": "Pharmacy Sales & Profitability Dashboard",
+  "tracks": [
+    "data-bi"
+  ],
+  "tags": [
+    "Dashboards"
+  ],
+  "context": "Data challenge",
+  "contextDetail": "Onyx Data, February challenge",
+  "featured": true,
+  "featuredOnHome": true,
+  "summary": "Power BI dashboard on a pharmacy sales and profitability dataset, covering revenue and profit trends, category performance, store size and geographic breakdowns.",
+  "problem": "A pharmacy sales dataset needed to become a clear view of where revenue and profit come from.",
+  "objective": "Show revenue and profit trends, category performance, and differences by store size and location.",
+  "approach": "Built a two-page Power BI report: an Overview page and a Sales & Profitability page.",
+  "process": [
+    "Explored the dataset and defined the questions the report should answer",
+    "Built the Overview page for headline trends",
+    "Built the Sales & Profitability page for category, store size and geographic breakdowns"
+  ],
+  "steps": [],
+  "tools": [
+    "Power BI"
+  ],
+  "aiComponent": "",
+  "results": [],
+  "beforeAfter": {
+    "before": "",
+    "after": ""
+  },
+  "impact": "",
+  "image": "",
+  "imageAlt": "",
+  "gallery": [],
+  "liveUrl": "",
+  "embedUrl": "",
+  "githubUrl": "",
+  "writeupUrl": ""
+}

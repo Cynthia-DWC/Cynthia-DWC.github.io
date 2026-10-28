@@ -1,0 +1,43 @@
+{
+  "id": "whatsapp-customer-journey",
+  "order": 6,
+  "published": false,
+  "title": "WhatsApp Customer Journey Workflow",
+  "tracks": [
+    "automation"
+  ],
+  "tags": [
+    "n8n"
+  ],
+  "context": "",
+  "contextDetail": "",
+  "featured": false,
+  "featuredOnHome": false,
+  "summary": "n8n workflow that automates a customer journey over WhatsApp using webhook and HTTP Request nodes, with production bugs identified and fixed.",
+  "problem": "",
+  "objective": "",
+  "approach": "",
+  "process": [
+    "Caught and fixed production bugs"
+  ],
+  "steps": [],
+  "tools": [
+    "n8n",
+    "Webhooks",
+    "HTTP Request"
+  ],
+  "aiComponent": "",
+  "results": [],
+  "beforeAfter": {
+    "before": "",
+    "after": ""
+  },
+  "impact": "",
+  "image": "",
+  "imageAlt": "",
+  "gallery": [],
+  "liveUrl": "",
+  "embedUrl": "",
+  "githubUrl": "",
+  "writeupUrl": ""
+}

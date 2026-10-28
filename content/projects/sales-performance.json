@@ -1,0 +1,47 @@
+{
+  "id": "sales-performance",
+  "order": 2,
+  "published": true,
+  "title": "Sales Performance Analysis (74,000+ rows)",
+  "tracks": [
+    "data-bi"
+  ],
+  "tags": [
+    "SQL & Data Cleaning",
+    "Dashboards"
+  ],
+  "context": "",
+  "contextDetail": "",
+  "featured": false,
+  "featuredOnHome": false,
+  "summary": "Cleaned and analysed 74,000+ rows of raw sales data, then built Power BI dashboards on revenue trends and performance drivers.",
+  "problem": "Raw sales data with duplicates and inconsistent records could not be trusted for planning.",
+  "objective": "Produce a clean dataset and dashboards that show revenue trends and what drives performance.",
+  "approach": "Cleaned the data with SQL and Excel, modelled it, then built dashboards in Power BI.",
+  "process": [
+    "Removed duplicates",
+    "Standardised records",
+    "Modelled the cleaned data",
+    "Built Power BI dashboards for revenue trends and performance drivers"
+  ],
+  "steps": [],
+  "tools": [
+    "SQL",
+    "Excel",
+    "Power BI"
+  ],
+  "aiComponent": "",
+  "results": [],
+  "beforeAfter": {
+    "before": "",
+    "after": ""
+  },
+  "impact": "Helped identify top-performing product lines and supported planning and resource prioritisation.",
+  "image": "",
+  "imageAlt": "",
+  "gallery": [],
+  "liveUrl": "",
+  "embedUrl": "",
+  "githubUrl": "",
+  "writeupUrl": ""
+}

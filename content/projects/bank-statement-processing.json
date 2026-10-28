@@ -1,0 +1,52 @@
+{
+  "id": "bank-statement-processing",
+  "order": 10,
+  "published": false,
+  "title": "Bank Statement Processing and Transaction Cleaning Workflow",
+  "tracks": [
+    "automation",
+    "data-bi"
+  ],
+  "tags": [
+    "n8n",
+    "SQL & Data Cleaning"
+  ],
+  "context": "",
+  "contextDetail": "",
+  "featured": false,
+  "featuredOnHome": false,
+  "summary": "n8n workflow that detects which bank a statement came from, identifies its header structure, and parses transactions into one clean, standard format.",
+  "problem": "Bank statements arrive in different formats, so transactions cannot be combined or analysed without manual cleaning.",
+  "objective": "Turn any supported bank statement into one clean, standard transaction format automatically.",
+  "approach": "Custom Detect Bank & Header and universal Parse Statement Code nodes in n8n.",
+  "process": [
+    "Detected the bank and header structure of each statement",
+    "Parsed transactions with a universal Parse Statement node",
+    "Cleaned and standardised the output"
+  ],
+  "steps": [
+    "Statement Upload",
+    "Detect Bank & Header",
+    "Parse Statement",
+    "Clean & Standardise Transactions",
+    "Output"
+  ],
+  "tools": [
+    "n8n",
+    "JavaScript (Code nodes)"
+  ],
+  "aiComponent": "",
+  "results": [],
+  "beforeAfter": {
+    "before": "",
+    "after": ""
+  },
+  "impact": "",
+  "image": "",
+  "imageAlt": "",
+  "gallery": [],
+  "liveUrl": "",
+  "embedUrl": "",
+  "githubUrl": "",
+  "writeupUrl": ""
+}

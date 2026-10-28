@@ -10,7 +10,7 @@ A static, three-page portfolio for Cynthia Chidalu Oguadimma (Data Analyst, BI a
 
 ## Architecture
 - Plain HTML, CSS and ES modules. No framework, no npm dependencies, no build step for the site itself.
-- All content lives in `content/*.json` and is rendered in the browser by `js/`. Entry point `js/main.js`; page chosen by `<body data-page>`.
+- All content lives in `content/*.json` and is rendered in the browser by `js/`. Projects are a Pages CMS collection: one file per project in `content/projects/<id>.json` with an `order` field; `prepare.mjs` combines them into `_site/content/projects.json` at deploy. Entry point `js/main.js`; page chosen by `<body data-page>`.
 - `.pages.yml` defines the Pages CMS forms. **Every key in a content file must have a matching field in `.pages.yml`**, or Pages CMS may drop it on save. It was validated against Pages CMS's own schema (no `list: {min,max}` without `collapsible`).
 - Paths in JSON are site-root-relative with no leading slash; `js/util.js` resolves them from `import.meta.url`, so the site works at a domain root or a repository sub-path.
 - `.github/workflows/deploy.yml` runs `.github/scripts/prepare.mjs` on every push to `main`: validates JSON, blocks em dashes, copies the site to `_site`, replaces `%%BASE%%` with the live URL, writes `sitemap.xml` and `robots.txt`. `docs/`, `CLAUDE.md` and `README.md` are not deployed.
@@ -27,8 +27,8 @@ A static, three-page portfolio for Cynthia Chidalu Oguadimma (Data Analyst, BI a
 
 ## Run and test locally
 ```bash
-python3 -m http.server 8000      # then open http://localhost:8000
-node .github/scripts/prepare.mjs https://example.github.io/   # dry-run the deploy step, then: rm -rf _site
+node .github/scripts/prepare.mjs http://localhost:8000/   # builds _site (needed: projects.json is generated)
+cd _site && python3 -m http.server 8000                    # then open http://localhost:8000; rm -rf _site when done
 ```
 Check every page at 360 px and 1440 px for horizontal overflow and console errors after changes.
 

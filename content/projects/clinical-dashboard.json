@@ -1,0 +1,44 @@
+{
+  "id": "clinical-dashboard",
+  "order": 4,
+  "published": true,
+  "title": "Clinical Performance Analytics Dashboard",
+  "tracks": [
+    "data-bi"
+  ],
+  "tags": [
+    "Dashboards"
+  ],
+  "context": "Personal project",
+  "contextDetail": "Not tied to any employer",
+  "featured": false,
+  "featuredOnHome": false,
+  "summary": "Tracks health operations KPIs such as no-show rates, patient wait times and provider utilisation.",
+  "problem": "Health operations teams need to see no-show rates, wait times and provider utilisation in one place.",
+  "objective": "Define the core clinical operations KPIs and track them in an interactive dashboard.",
+  "approach": "Defined the KPIs, built the dashboard in Power BI, and applied data privacy best practice throughout.",
+  "process": [
+    "Defined KPIs for no-show rates, patient wait times and provider utilisation",
+    "Built the Power BI dashboard",
+    "Applied data privacy best practice throughout"
+  ],
+  "steps": [],
+  "tools": [
+    "Power BI",
+    "Excel"
+  ],
+  "aiComponent": "",
+  "results": [],
+  "beforeAfter": {
+    "before": "",
+    "after": ""
+  },
+  "impact": "Demonstrates readiness for health analytics roles.",
+  "image": "",
+  "imageAlt": "",
+  "gallery": [],
+  "liveUrl": "",
+  "embedUrl": "",
+  "githubUrl": "",
+  "writeupUrl": ""
+}

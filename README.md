@@ -46,7 +46,7 @@ Rules that keep the site consistent:
 - Use public or synthetic data only in screenshots. Never upload anything from an employer.
 
 ### Add or finish a project
-1. **Projects** → open the project (or **Add an entry**).
+1. **Projects** shows a table of all your projects. Click a project's name to open its page, or click **Add an entry** for a new one.
 2. Fill in the case study fields. Mark each result as **measured** or **projected**.
 3. Upload a **Card screenshot** (16:9, about 1280 x 720 px, under 300 KB; compress at squoosh.app or tinypng.com) and write a **Screenshot description**.
 4. Add links: live dashboard, code (GitHub) or write-up (LinkedIn post).
@@ -101,7 +101,7 @@ In any list (projects, experience, skills), drag items into the order you want. 
 index.html, data-bi/index.html, automation/index.html   page shells and <head> metadata
 admin/index.html                                        private editor shortcut (not indexed)
 404.html                                                not-found page
-content/*.json                                          all content (edited through Pages CMS)
+content/*.json, content/projects/*.json                  all content (edited through Pages CMS)
 .pages.yml                                              editor forms for content/
 css/tokens.css                                          colours, fonts, spacing
 css/main.css                                            layout and components
@@ -114,7 +114,8 @@ assets/og                                               social preview images (1
 
 - **Page titles and descriptions** for search and link previews are in the `<head>` of the three `index.html` files. `%%BASE%%` is replaced with the live address during deploy; leave it as is.
 - **Colours and fonts:** change the variables in `css/tokens.css`.
-- **Run locally:** in the site folder run `python3 -m http.server 8000`, then open `http://localhost:8000`.
+- **Projects** are stored one file per project in `content/projects/`. The deploy step combines them into `content/projects.json`, sorted by `order`.
+- **Run locally:** run `node .github/scripts/prepare.mjs http://localhost:8000/`, then `cd _site && python3 -m http.server 8000` and open `http://localhost:8000`. (Serving the repository root directly will not show projects.)
 
 ---
 

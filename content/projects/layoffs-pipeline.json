@@ -1,0 +1,58 @@
+{
+  "id": "layoffs-pipeline",
+  "order": 3,
+  "published": true,
+  "title": "Layoffs Data Cleaning and Modelling Pipeline",
+  "tracks": [
+    "data-bi"
+  ],
+  "tags": [
+    "SQL & Data Cleaning"
+  ],
+  "context": "Personal project",
+  "contextDetail": "",
+  "featured": false,
+  "featuredOnHome": false,
+  "summary": "Full MySQL cleaning pipeline for a raw layoffs dataset, modelled into a star schema for visualisation.",
+  "problem": "The raw layoffs dataset contained duplicates, inconsistent text and unparsed dates, so it could not be analysed reliably.",
+  "objective": "Build a reproducible cleaning pipeline and a star schema ready for visualisation.",
+  "approach": "Worked in a staging table so the raw data stayed untouched, then cleaned and modelled the data step by step.",
+  "process": [
+    "Created a staging table",
+    "Removed duplicates",
+    "Normalised text values",
+    "Parsed dates",
+    "Engineered features such as percentage laid off",
+    "Modelled the cleaned data into a star schema",
+    "Documented each step for reproducibility"
+  ],
+  "steps": [
+    "Raw Data",
+    "Staging",
+    "Deduplication",
+    "Text Normalisation",
+    "Date Parsing",
+    "Feature Engineering",
+    "Star Schema",
+    "Power BI"
+  ],
+  "tools": [
+    "MySQL",
+    "Power BI",
+    "Excel/CSV"
+  ],
+  "aiComponent": "",
+  "results": [],
+  "beforeAfter": {
+    "before": "",
+    "after": ""
+  },
+  "impact": "Shows end-to-end ETL design, data validation and reproducible documentation.",
+  "image": "",
+  "imageAlt": "",
+  "gallery": [],
+  "liveUrl": "",
+  "embedUrl": "",
+  "githubUrl": "",
+  "writeupUrl": ""
+}

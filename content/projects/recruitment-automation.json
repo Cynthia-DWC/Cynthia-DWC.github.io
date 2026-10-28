@@ -1,0 +1,70 @@
+{
+  "id": "recruitment-automation",
+  "order": 5,
+  "published": true,
+  "title": "Recruitment Workflow Automation",
+  "tracks": [
+    "automation"
+  ],
+  "tags": [
+    "n8n"
+  ],
+  "context": "Personal project",
+  "contextDetail": "",
+  "featured": true,
+  "featuredOnHome": true,
+  "summary": "End-to-end recruitment automation covering application intake, unique applicant IDs, CV extraction, HR notification, role-based scoring, shortlisting, interview scheduling and applicant communication.",
+  "problem": "Manual application handling is slow, inconsistent and delays responses to candidates.",
+  "objective": "Automate the journey from application to interview scheduling, with consistent scoring and timely candidate communication.",
+  "approach": "Built the pipeline in n8n, triggered by a Google Form submission, with each stage handled by its own step.",
+  "process": [
+    "Generated a unique ID for every applicant",
+    "Extracted CV content automatically",
+    "Notified HR of each new application",
+    "Scored candidates against role-based criteria and shortlisted them",
+    "Debugged a JavaScript Code node for timestamp parsing and business-day calculation",
+    "Validated the full pipeline on a test cohort"
+  ],
+  "steps": [
+    "Google Form Submission",
+    "Applicant ID Generation",
+    "CV Extraction",
+    "HR Notification",
+    "Role-Based Scoring",
+    "Shortlisting",
+    "Interview Scheduling",
+    "Applicant Communication"
+  ],
+  "tools": [
+    "n8n",
+    "Google Forms",
+    "Gmail"
+  ],
+  "aiComponent": "",
+  "results": [
+    {
+      "text": "Validated on a test cohort: ID generation, email delivery, CV extraction and scoring all worked correctly.",
+      "basis": "measured"
+    },
+    {
+      "text": "Designed to cut manual HR processing time by 60-80%.",
+      "basis": "projected"
+    },
+    {
+      "text": "Designed to reduce application-to-notification time from hours to minutes.",
+      "basis": "projected"
+    }
+  ],
+  "beforeAfter": {
+    "before": "Manual intake, reading and replying. Hours per applicant.",
+    "after": "Automated intake, scoring and reply. Minutes per applicant (projected)."
+  },
+  "impact": "Faster, more consistent screening and quicker responses to candidates.",
+  "image": "",
+  "imageAlt": "",
+  "gallery": [],
+  "liveUrl": "",
+  "embedUrl": "",
+  "githubUrl": "",
+  "writeupUrl": ""
+}

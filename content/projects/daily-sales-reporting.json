@@ -1,0 +1,51 @@
+{
+  "id": "daily-sales-reporting",
+  "order": 8,
+  "published": true,
+  "title": "Automated Daily Sales Reporting Workflow",
+  "tracks": [
+    "automation",
+    "data-bi"
+  ],
+  "tags": [
+    "Reporting"
+  ],
+  "context": "",
+  "contextDetail": "",
+  "featured": false,
+  "featuredOnHome": false,
+  "summary": "Scheduled workflow that pulls data from Google Sheets, aggregates it and emails a daily report, replacing manual compilation and distribution.",
+  "problem": "Compiling and sending a sales report by hand every day takes time and is easy to forget.",
+  "objective": "Deliver the daily sales report automatically.",
+  "approach": "A daily schedule trigger reads the sheet, aggregates the figures and sends the report by Gmail.",
+  "process": [
+    "Scheduled a daily trigger",
+    "Pulled live data from Google Sheets",
+    "Aggregated the figures",
+    "Emailed the report automatically"
+  ],
+  "steps": [
+    "Daily Schedule Trigger",
+    "Google Sheets",
+    "Aggregator",
+    "Gmail"
+  ],
+  "tools": [
+    "Google Sheets",
+    "Gmail"
+  ],
+  "aiComponent": "",
+  "results": [],
+  "beforeAfter": {
+    "before": "",
+    "after": ""
+  },
+  "impact": "Replaces manual report compilation and distribution.",
+  "image": "",
+  "imageAlt": "",
+  "gallery": [],
+  "liveUrl": "",
+  "embedUrl": "",
+  "githubUrl": "",
+  "writeupUrl": ""
+}

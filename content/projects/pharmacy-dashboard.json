@@ -13,14 +13,16 @@
   "contextDetail": "Onyx Data, February challenge",
   "featured": true,
   "featuredOnHome": true,
-  "summary": "Power BI dashboard on a pharmacy sales and profitability dataset, covering revenue and profit trends, category performance, store size and geographic breakdowns.",
-  "problem": "A pharmacy sales dataset needed to become a clear view of where revenue and profit come from.",
-  "objective": "Show revenue and profit trends, category performance, and differences by store size and location.",
-  "approach": "Built a two-page Power BI report: an Overview page and a Sales & Profitability page.",
+  "summary": "Power BI analysis of $8.63M in pharmacy sales, finding what drives performance across products, regions, store sizes and cities.",
+  "problem": "Pharmacy performance was uneven across products, regions, store formats and cities, with no single view of where revenue and profit actually came from.",
+  "objective": "Show revenue and profit trends, category performance and differences by store size and location, and point to where growth should be prioritised.",
+  "approach": "Built a two-page Power BI report (Overview, and Sales & Profitability) with headline KPI cards, Year, Quarter, Month and Day drill-down, and breakdowns by category, store size and location (country, region and city).",
   "process": [
-    "Explored the dataset and defined the questions the report should answer",
-    "Built the Overview page for headline trends",
-    "Built the Sales & Profitability page for category, store size and geographic breakdowns"
+    "Explored the dataset and defined the business questions: which products, regions and store types drive performance",
+    "Built KPI cards for cost, revenue, units sold, profit margin and transaction count",
+    "Added revenue and profit trends with Year, Quarter, Month and Day drill-down to show seasonality",
+    "Broke sales down by product category, store size and top cities, with Country, Region and City views",
+    "Summarised the findings and growth opportunities in a LinkedIn write-up"
   ],
   "steps": [],
   "diagramImage": "",
@@ -29,16 +31,41 @@
     "Power BI"
   ],
   "aiComponent": "",
-  "results": [],
+  "results": [
+    {
+      "text": "$8.63M revenue and $2.42M profit, a 28% profit margin, from 446K units across 62K transactions",
+      "basis": "measured"
+    },
+    {
+      "text": "OTC led all categories with 19.4K sales, ahead of Prescription (13.1K) and Wellness (12.5K)",
+      "basis": "measured"
+    },
+    {
+      "text": "Urban pharmacies generated $4.1M in revenue, against $3.1M for Suburban and $1.4M for Rural",
+      "basis": "measured"
+    },
+    {
+      "text": "Medium stores led with 28.2K sales, ahead of Large (19.8K) and Small (14.2K)",
+      "basis": "measured"
+    },
+    {
+      "text": "Monthly revenue ranged from $0.5M to $1.0M, with peaks mid-year and towards year-end",
+      "basis": "measured"
+    },
+    {
+      "text": "Milan (3.5K) and Hamburg (3.1K) led city sales, while the lowest cities recorded about 2.1K",
+      "basis": "measured"
+    }
+  ],
   "beforeAfter": {
     "before": "",
     "after": ""
   },
-  "impact": "",
-  "image": "",
-  "imageAlt": "",
+  "impact": "Shows that growth is concentrated in high-density markets, OTC products and medium-format stores, giving leadership a clear basis to decide whether to prioritise products, regions or store strategy.",
+  "image": "assets/uploads/pharmacy-dashboard-overview.jpg",
+  "imageAlt": "Pharmacy Sales & Performance Analysis dashboard in Power BI: KPI cards, revenue and profit trends by month, sales by category, store size and top cities",
   "gallery": [],
-  "liveUrl": "",
+  "liveUrl": "https://lnkd.in/e_kM3cJf",
   "embedUrl": "",
   "githubUrl": "",
   "writeupUrl": ""

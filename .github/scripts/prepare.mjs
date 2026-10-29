@@ -76,6 +76,17 @@ for (const entry of fs.readdirSync(root)) {
 fs.writeFileSync(path.join(out, 'content', 'projects.json'), JSON.stringify(projects, null, 2));
 fs.rmSync(path.join(out, 'content', 'projects'), { recursive: true, force: true });
 
+// Cache busting: every deploy gets a new version tag on CSS and JS, so browsers never mix old and new files.
+const ver = (process.env.GITHUB_SHA || Date.now().toString(36)).slice(0, 8);
+for (const f of fs.readdirSync(path.join(out, 'js'))) {
+  const p = path.join(out, 'js', f);
+  fs.writeFileSync(p, fs.readFileSync(p, 'utf8').replace(/(from\s+'\.\/[\w-]+\.js)'/g, `$1?v=${ver}'`));
+}
+for (const f of ['index.html', 'data-bi/index.html', 'automation/index.html']) {
+  const p = path.join(out, f);
+  if (fs.existsSync(p)) fs.writeFileSync(p, fs.readFileSync(p, 'utf8').replace(/((?:css\/[\w-]+\.css|js\/main\.js))"/g, `$1?v=${ver}"`));
+}
+
 // Live address in head tags and the 404 page.
 const htmlFiles = ['index.html', 'data-bi/index.html', 'automation/index.html', '404.html'];
 for (const f of htmlFiles) {

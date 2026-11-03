@@ -1,8 +1,8 @@
 {
+  "title": "Event Registration Automation",
   "id": "event-registration",
   "order": 7,
   "published": true,
-  "title": "Event Registration Automation",
   "tracks": [
     "automation"
   ],
@@ -28,25 +28,12 @@
     "Filtering",
     "Conditional Routing",
     "Confirmation Email",
-    "Reminder Email"
+    "Reminder Email",
+    "Workflow Snapshoot "
   ],
-  "diagramImage": "",
-  "diagramAlt": "",
+  "diagramImage": "assets/uploads/Screenshot 2026-11-03 125602.png",
   "tools": [
     "Make"
   ],
-  "aiComponent": "",
-  "results": [],
-  "beforeAfter": {
-    "before": "",
-    "after": ""
-  },
-  "impact": "Removes manual follow-up from the registration process.",
-  "image": "",
-  "imageAlt": "",
-  "gallery": [],
-  "liveUrl": "",
-  "embedUrl": "",
-  "githubUrl": "",
-  "writeupUrl": ""
+  "impact": "Removes manual follow-up from the registration process."
 }

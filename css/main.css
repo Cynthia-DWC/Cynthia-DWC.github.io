@@ -603,3 +603,14 @@ body::before {
 .cs-diagram { display: block; border: 1px solid var(--line); border-radius: var(--r-sm); overflow: hidden; background: var(--card); }
 .cs-diagram img { width: 100%; height: auto; }
 .cs-flow .flow-label { color: var(--on-navy); }
+
+/* Screenshot viewer in case studies */
+.viewer { display: grid; gap: 10px; }
+.viewer-main { display: block; border: 1px solid var(--line); border-radius: var(--r-sm); overflow: hidden; background: var(--card); }
+.viewer-main img { width: 100%; height: auto; max-height: 70vh; object-fit: contain; background: var(--paper-2); }
+.viewer-thumbs { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 8px; }
+.viewer-thumb { padding: 0; border: 2px solid transparent; border-radius: 6px; overflow: hidden; background: var(--card); cursor: pointer; aspect-ratio: 16 / 10; }
+.viewer-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top left; opacity: 0.75; }
+.viewer-thumb[aria-pressed="true"] { border-color: var(--accent); }
+.viewer-thumb[aria-pressed="true"] img, .viewer-thumb:hover img { opacity: 1; }
+.viewer-cap { font-size: 0.88rem; color: var(--ink-3); }

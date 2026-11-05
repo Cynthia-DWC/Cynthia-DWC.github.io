@@ -58,5 +58,7 @@
     "before": "Manual intake, reading and replying. Hours per applicant.",
     "after": "Automated intake, scoring and reply. Minutes per applicant (projected)."
   },
-  "impact": "Faster, more consistent screening and quicker responses to candidates."
+  "impact": "Faster, more consistent screening and quicker responses to candidates.",
+  "screenshots": [],
+  "screenshotsCaption": ""
 }

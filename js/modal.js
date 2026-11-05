@@ -11,6 +11,19 @@ const strs = (arr) => (Array.isArray(arr) ? arr.filter((s) => has(s)) : []);
 const row = (label, content) => (content ? `<div class="cs-row"><p class="cs-label">${esc(label)}</p><div class="cs-content">${content}</div></div>` : '');
 const para = (t) => (has(t) ? `<p>${esc(t)}</p>` : '');
 
+function screensHtml(p) {
+  const shots = Array.isArray(p.screenshots) ? p.screenshots.filter(has) : [];
+  const legacy = (p.gallery || []).filter((g) => has(g?.src)).map((g) => g.src);
+  const all = [...new Set([p.image, ...shots, ...legacy].filter(has))].slice(0, 6);
+  if (!all.length) return '';
+  const alt = (i) => (i === 0 && has(p.image) && has(p.imageAlt)) ? p.imageAlt : `${p.screenshotsCaption || p.title}, screenshot ${i + 1} of ${all.length}`;
+  const main = `<a class="viewer-main" href="${esc(asset(all[0]))}" target="_blank" rel="noopener"><img src="${esc(asset(all[0]))}" alt="${esc(alt(0))}" data-viewer-main></a>`;
+  const thumbs = all.length > 1 ? `<div class="viewer-thumbs" role="group" aria-label="Choose screenshot">${all.map((src, i) => `
+    <button type="button" class="viewer-thumb" aria-pressed="${i === 0}" data-src="${esc(asset(src))}" data-alt="${esc(alt(i))}"><img src="${esc(asset(src))}" alt="" loading="lazy"><span class="visually-hidden">Show screenshot ${i + 1}</span></button>`).join('')}</div>` : '';
+  const cap = has(p.screenshotsCaption) ? `<p class="viewer-cap">${esc(p.screenshotsCaption)}</p>` : '';
+  return `<div class="viewer">${main}${thumbs}${cap}</div>`;
+}
+
 function body(p) {
   const process = strs(p.process);
   const steps = strs(p.steps);
@@ -41,7 +54,7 @@ function body(p) {
       </div>` : ''),
     row('Results', results.length ? `<ul class="results">${results.map((r) => `<li><span>${esc(r.text)}</span><span class="basis basis--${r.basis === 'projected' ? 'projected' : 'measured'}">${r.basis === 'projected' ? 'Projected' : 'Measured'}</span></li>`).join('')}</ul>` : ''),
     row('Business impact', para(p.impact)),
-    row('Screens', gallery.length ? `<div class="gallery">${gallery.map((g) => `<img src="${esc(asset(g.src))}" alt="${esc(g.alt || '')}" loading="lazy">`).join('')}</div>` : (has(p.image) ? `<img src="${esc(asset(p.image))}" alt="${esc(p.imageAlt || '')}" loading="lazy" style="border-radius:6px;border:1px solid var(--line)">` : '')),
+    row('Screens', screensHtml(p)),
     row('Interactive', has(p.embedUrl) ? `<div class="embed-box" data-embed="${esc(p.embedUrl)}"><button type="button" class="btn btn--dark" data-load-embed>Load interactive dashboard</button></div>` : ''),
     row('Links', links.length ? `<div class="cs-links">${links.join('')}</div>` : '')
   ].join('');
@@ -96,6 +109,14 @@ export function initModal(projects, page) {
   dialog.addEventListener('click', (e) => {
     if (e.target === dialog) close();
     if (e.target.closest('.cs-close')) close();
+    const thumb = e.target.closest('.viewer-thumb');
+    if (thumb) {
+      const viewer = thumb.closest('.viewer');
+      const img = viewer.querySelector('[data-viewer-main]');
+      img.src = thumb.dataset.src; img.alt = thumb.dataset.alt;
+      img.parentElement.href = thumb.dataset.src;
+      viewer.querySelectorAll('.viewer-thumb').forEach((b) => b.setAttribute('aria-pressed', String(b === thumb)));
+    }
     const loadBtn = e.target.closest('[data-load-embed]');
     if (loadBtn) {
       const box = loadBtn.closest('.embed-box');

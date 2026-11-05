@@ -45,9 +45,10 @@
   "impact": "Replaces manual report compilation and distribution.",
   "image": "",
   "imageAlt": "",
-  "gallery": [],
   "liveUrl": "",
   "embedUrl": "",
   "githubUrl": "",
-  "writeupUrl": ""
+  "writeupUrl": "",
+  "screenshots": [],
+  "screenshotsCaption": ""
 }

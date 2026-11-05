@@ -28,12 +28,15 @@
     "Filtering",
     "Conditional Routing",
     "Confirmation Email",
-    "Reminder Email",
-    "Workflow Snapshoot "
+    "Reminder Email"
   ],
   "diagramImage": "assets/uploads/Screenshot 2026-11-03 125602.png",
   "tools": [
     "Make"
   ],
-  "impact": "Removes manual follow-up from the registration process."
+  "impact": "Removes manual follow-up from the registration process.",
+  "screenshots": [
+    "assets/uploads/Screenshot 2026-11-03 130044.png"
+  ],
+  "screenshotsCaption": ""
 }

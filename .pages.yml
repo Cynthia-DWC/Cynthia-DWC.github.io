@@ -219,13 +219,8 @@ content:
       - { name: impact, label: Business impact, type: text }
       - { name: image, label: Card screenshot (upload), type: image, options: { media: images }, description: "Main image for the project card. 16:9, about 1280 x 720 px. Public or synthetic data only." }
       - { name: imageAlt, label: Screenshot description, type: string, description: "Describe what the screenshot shows, for screen readers." }
-      - name: gallery
-        label: Extra screenshots
-        type: object
-        list: true
-        fields:
-          - { name: src, label: Image, type: image, options: { media: images } }
-          - { name: alt, label: Description, type: string }
+      - { name: screenshots, label: Project screenshots (up to 5), type: image, options: { media: images, multiple: { max: 5 } }, description: "Upload up to 5 images (dashboard pages, workflow views, results). The first is shown largest in the case study. Public or synthetic data only." }
+      - { name: screenshotsCaption, label: Screenshots description, type: string, description: "One line describing what the screenshots show, e.g. Overview and Sales & Profitability pages of the Power BI report" }
       - { name: liveUrl, label: Live dashboard link, type: string }
       - { name: embedUrl, label: Power BI embed link, type: string, description: "Publish to web link. Only for public datasets." }
       - { name: githubUrl, label: Code link, type: string }

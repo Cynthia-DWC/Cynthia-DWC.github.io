@@ -52,9 +52,10 @@
   "impact": "Shows end-to-end ETL design, data validation and reproducible documentation.",
   "image": "",
   "imageAlt": "",
-  "gallery": [],
   "liveUrl": "",
   "embedUrl": "",
   "githubUrl": "",
-  "writeupUrl": ""
+  "writeupUrl": "",
+  "screenshots": [],
+  "screenshotsCaption": ""
 }

@@ -38,9 +38,10 @@
   "impact": "Failures are caught and communicated immediately.",
   "image": "",
   "imageAlt": "",
-  "gallery": [],
   "liveUrl": "",
   "embedUrl": "",
   "githubUrl": "",
-  "writeupUrl": ""
+  "writeupUrl": "",
+  "screenshots": [],
+  "screenshotsCaption": ""
 }

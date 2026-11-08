@@ -30,12 +30,12 @@
   "showcaseText": "I look for repetitive manual processes and design workflows that remove unnecessary human steps, with error handling so they keep running reliably.",
   "skillsHeading": "Skills and tools",
   "projectsHeading": "Projects",
-  "projectsIntro": "Workflows built in n8n and Make, from personal projects and TS Academy's AI & Automation programme.",
+  "projectsIntro": "Workflows built in n8n, Make and Zapier, from personal projects and TS Academy's AI & Automation programme.",
   "filters": [
     "n8n",
     "Make",
-    "AI-assisted",
-    "Zapier"
+    "Zapier",
+    "AI-assisted"
   ],
   "experienceHeading": "Relevant experience",
   "certificationsHeading": "Relevant certifications",

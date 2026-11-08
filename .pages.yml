@@ -188,7 +188,7 @@ content:
       - { name: order, label: Display order, type: number, description: "1 shows first. Projects are sorted by this number." }
       - { name: published, label: Show on site, type: boolean, default: false, description: "Switch on when the project is ready." }
       - { name: tracks, label: Show on page, type: select, options: { values: [data-bi, automation], multiple: true } }
-      - { name: tags, label: Filter tags, type: select, options: { values: [Dashboards, "SQL & Data Cleaning", Reporting, n8n, Make, AI-assisted], multiple: true } }
+      - { name: tags, label: Filter tags, type: select, options: { values: [Dashboards, "SQL & Data Cleaning", Reporting, n8n, Make, Zapier, AI-assisted], multiple: true } }
       - { name: context, label: Context, type: select, options: { values: [Professional, Personal project, Training programme, Data challenge] } }
       - { name: contextDetail, label: Context detail, type: string, description: "e.g. TS Academy, or Onyx Data, February challenge" }
       - { name: featured, label: Featured (Flagship badge), type: boolean, description: "Adds the gold Flagship badge and leads the workflow showcase on its page." }

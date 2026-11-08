@@ -12,7 +12,6 @@
   "context": "",
   "contextDetail": "",
   "featured": false,
-  "featuredOnHome": false,
   "summary": "n8n workflow that automates a customer journey over WhatsApp using webhook and HTTP Request nodes, with production bugs identified and fixed.",
   "problem": "",
   "objective": "",

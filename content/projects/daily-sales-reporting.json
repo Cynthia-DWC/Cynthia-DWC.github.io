@@ -13,7 +13,6 @@
   "context": "",
   "contextDetail": "",
   "featured": false,
-  "featuredOnHome": false,
   "summary": "Scheduled workflow that pulls data from Google Sheets, aggregates it and emails a daily report, replacing manual compilation and distribution.",
   "problem": "Compiling and sending a sales report by hand every day takes time and is easy to forget.",
   "objective": "Deliver the daily sales report automatically.",

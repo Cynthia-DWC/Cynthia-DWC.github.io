@@ -101,7 +101,17 @@
     }
   ],
   "featuredHeading": "Featured work",
-  "featuredIntro": "Flagship projects first, then the rest of my work. Filter by specialism or open any case study.",
+  "featuredIntro": "A selection of my work across data, BI and automation. Each specialist page has the full set.",
+  "featuredProjects": [
+    "pharmacy-dashboard",
+    "recruitment-automation",
+    "sales-performance",
+    "layoffs-pipeline",
+    "clinical-dashboard",
+    "event-registration",
+    "daily-sales-reporting",
+    "error-handling-rebuild"
+  ],
   "experienceHeading": "Experience",
   "confidentialityNote": "Employer work is described without client or internal data. Project screenshots use public or synthetic datasets.",
   "certificationsHeading": "Certifications and learning",

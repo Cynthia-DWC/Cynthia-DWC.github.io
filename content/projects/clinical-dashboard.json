@@ -12,7 +12,6 @@
   "context": "Personal project",
   "contextDetail": "Not tied to any employer",
   "featured": false,
-  "featuredOnHome": false,
   "summary": "Tracks health operations KPIs such as no-show rates, patient wait times and provider utilisation.",
   "problem": "Health operations teams need to see no-show rates, wait times and provider utilisation in one place.",
   "objective": "Define the core clinical operations KPIs and track them in an interactive dashboard.",

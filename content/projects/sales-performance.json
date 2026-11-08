@@ -13,7 +13,6 @@
   "context": "",
   "contextDetail": "",
   "featured": false,
-  "featuredOnHome": false,
   "summary": "Cleaned and analysed 74,000+ rows of raw sales data, then built Power BI dashboards on revenue trends and performance drivers.",
   "problem": "Raw sales data with duplicates and inconsistent records could not be trusted for planning.",
   "objective": "Produce a clean dataset and dashboards that show revenue trends and what drives performance.",

@@ -614,3 +614,5 @@ body::before {
 .viewer-thumb[aria-pressed="true"] { border-color: var(--accent); }
 .viewer-thumb[aria-pressed="true"] img, .viewer-thumb:hover img { opacity: 1; }
 .viewer-cap { font-size: 0.88rem; color: var(--ink-3); }
+
+.see-all { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: var(--s6); }

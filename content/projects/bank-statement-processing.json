@@ -14,7 +14,6 @@
   "context": "",
   "contextDetail": "",
   "featured": false,
-  "featuredOnHome": false,
   "summary": "n8n workflow that detects which bank a statement came from, identifies its header structure, and parses transactions into one clean, standard format.",
   "problem": "Bank statements arrive in different formats, so transactions cannot be combined or analysed without manual cleaning.",
   "objective": "Turn any supported bank statement into one clean, standard transaction format automatically.",

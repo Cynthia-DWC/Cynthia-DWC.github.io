@@ -12,7 +12,6 @@
   "context": "Data challenge",
   "contextDetail": "Onyx Data, February challenge",
   "featured": true,
-  "featuredOnHome": true,
   "summary": "Power BI analysis of $8.63M in pharmacy sales, finding what drives performance across products, regions, store sizes and cities.",
   "problem": "Pharmacy performance was uneven across products, regions, store formats and cities, with no single view of where revenue and profit actually came from.",
   "objective": "Show revenue and profit trends, category performance and differences by store size and location, and point to where growth should be prioritised.",

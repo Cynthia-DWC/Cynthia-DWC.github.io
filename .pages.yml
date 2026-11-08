@@ -95,6 +95,12 @@ content:
           - { name: text, label: Text, type: text }
       - { name: featuredHeading, label: Featured work heading, type: string }
       - { name: featuredIntro, label: Featured work intro, type: text }
+      - name: featuredProjects
+        label: Featured projects (Home page only)
+        type: reference
+        list: true
+        options: { collection: projects, value: "{fields.id}", label: "{fields.title}", search: "title" }
+        description: "Pick the projects to show on Home. Drag to reorder, use the bin to remove. Does not change the Data & BI or Automation pages. Hidden projects (Show on site off) are skipped."
       - { name: experienceHeading, label: Experience heading, type: string }
       - { name: confidentialityNote, label: Confidentiality note, type: text }
       - { name: certificationsHeading, label: Certifications heading, type: string }
@@ -192,7 +198,6 @@ content:
       - { name: context, label: Context, type: select, options: { values: [Professional, Personal project, Training programme, Data challenge] } }
       - { name: contextDetail, label: Context detail, type: string, description: "e.g. TS Academy, or Onyx Data, February challenge" }
       - { name: featured, label: Featured (Flagship badge), type: boolean, description: "Adds the gold Flagship badge and leads the workflow showcase on its page." }
-      - { name: featuredOnHome, label: Featured on Home (shows first), type: boolean, description: "Every published project shows on Home. Featured ones show first." }
       - { name: summary, label: Card summary, type: text, description: "One or two sentences." }
       - { name: problem, label: Business problem, type: text }
       - { name: objective, label: Objective, type: text }

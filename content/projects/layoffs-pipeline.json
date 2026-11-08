@@ -12,7 +12,6 @@
   "context": "Personal project",
   "contextDetail": "",
   "featured": false,
-  "featuredOnHome": false,
   "summary": "Full MySQL cleaning pipeline for a raw layoffs dataset, modelled into a star schema for visualisation.",
   "problem": "The raw layoffs dataset contained duplicates, inconsistent text and unparsed dates, so it could not be analysed reliably.",
   "objective": "Build a reproducible cleaning pipeline and a star schema ready for visualisation.",

@@ -62,6 +62,9 @@ Rules that keep the site consistent:
 ### Add your headshot
 **Site settings → Headshot photo.** A square, professional photo of at least 440 x 440 px.
 
+### Choose the projects on the Home page
+**Home page → Featured projects (Home page only).** Click **Add an item** and pick a project, drag items to reorder, or use the bin to remove one. This changes Home only; the Data & BI and Automation pages always show every published project for their area, ordered by each project's **Display order**.
+
 ### Reorder anything
 In any list (projects, experience, skills), drag items into the order you want. Order in the editor is the order on the site.
 

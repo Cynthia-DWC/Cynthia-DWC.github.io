@@ -12,7 +12,6 @@
   "context": "Training programme",
   "contextDetail": "TS Academy",
   "featured": false,
-  "featuredOnHome": false,
   "summary": "Multi-path automation covering the full registration lifecycle with filtering, conditional routing, confirmation and reminder emails.",
   "problem": "Manual registration follow-up is slow and easy to get wrong.",
   "objective": "Handle registrations from submission to reminder without manual follow-up.",

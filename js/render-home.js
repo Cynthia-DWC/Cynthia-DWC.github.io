@@ -66,13 +66,19 @@ export function renderHome(data) {
       </div>
     </section>` : '';
 
-  // Home shows every published project: Home flagships first, then by display order.
-  const homeProjects = [...projects].sort((a, b) => (b.featuredOnHome ? 1 : 0) - (a.featuredOnHome ? 1 : 0));
+  // Home shows the projects picked in Home page > Featured projects, in that order (hidden ones skipped).
+  // If the list is empty, it falls back to every published project.
+  const byId = Object.fromEntries(projects.map((p) => [p.id, p]));
+  const picked = (home.featuredProjects || []).map((v) => byId[typeof v === 'object' && v ? v.value : v]).filter(Boolean);
+  const homeProjects = [...new Set(picked.length ? picked : projects)];
+  const tracksUsed = new Set(homeProjects.flatMap((p) => p.tracks || []));
+  const moreLinks = [...tracksUsed].length ? `
+        <p class="see-all">${['data-bi', 'automation'].map((k) => `<a class="link-arrow" href="${esc(pageHref(k, '#projects'))}">All ${esc(k === 'automation' ? autoLabel : 'Data & BI')} projects</a>`).join('')}</p>` : '';
   const featuredHtml = projectsSection({
     id: 'featured', num: n(), eyebrow: 'Selected work', title: home.featuredHeading, intro: home.featuredIntro,
     projects: homeProjects, filters: ['Data & BI', 'Automation'], tone: 'band--white',
     filterOf: (p) => (p.tracks || []).map(trackLabel)
-  });
+  }).replace(/(<\/ul>\s*<\/div>\s*<\/section>\s*)$/, (m) => m.replace('</ul>', `</ul>${moreLinks}`));
 
   const exp = published(data.experience);
   const edu = (data.education || []).filter((e) => has(e.qualification));

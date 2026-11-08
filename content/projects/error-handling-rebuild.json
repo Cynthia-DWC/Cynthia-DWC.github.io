@@ -10,7 +10,6 @@
   "context": "",
   "contextDetail": "",
   "featured": false,
-  "featuredOnHome": false,
   "summary": "Rebuilt an existing automation independently, adding structured error triggers and automated alerts so failures are caught and reported immediately.",
   "problem": "An automation without error handling can fail silently.",
   "objective": "Rebuild the workflow so that every failure is caught and reported straight away.",

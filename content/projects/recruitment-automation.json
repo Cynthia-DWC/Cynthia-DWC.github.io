@@ -11,7 +11,6 @@
   ],
   "context": "Professional",
   "featured": true,
-  "featuredOnHome": true,
   "summary": "End-to-end recruitment automation covering application intake, unique applicant IDs, CV extraction, HR notification, role-based scoring, shortlisting, interview scheduling and applicant communication.",
   "problem": "Manual application handling is slow, inconsistent and delays responses to candidates.",
   "objective": "Automate the journey from application to interview scheduling, with consistent scoring and timely candidate communication.",

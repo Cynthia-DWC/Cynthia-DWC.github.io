@@ -4,8 +4,7 @@
   "order": 10,
   "published": true,
   "tracks": [
-    "automation",
-    "data-bi"
+    "automation"
   ],
   "tags": [
     "n8n",

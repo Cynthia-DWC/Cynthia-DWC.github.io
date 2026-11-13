@@ -52,14 +52,6 @@
     "url": "https://certificates.tsacademyonline.com/student/dashboard"
   },
   {
-    "name": "PL-300: Power BI Data Analyst Associate",
-    "issuer": "Microsoft",
-    "status": "in progress",
-    "tracks": [
-      "data-bi"
-    ]
-  },
-  {
     "name": "Google Data Analytics Certificate",
     "issuer": "Google",
     "status": "in progress",

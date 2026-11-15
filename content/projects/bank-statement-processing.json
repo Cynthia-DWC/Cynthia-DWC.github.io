@@ -7,12 +7,11 @@
     "automation"
   ],
   "tags": [
-    "n8n",
-    "SQL & Data Cleaning"
+    "n8n"
   ],
   "featured": false,
   "summary": "n8n workflow that detects which bank a statement came from, identifies its header structure, and parses transactions into one clean, standard format.",
-  "problem": "Bank statements arrive in different formats, so transactions cannot be combined or analysed without manual cleaning.",
+  "problem": "• Bank statements are often received in PDF format and require manual processing.\n• Analysts may need to extract transactions and transfer them into Excel.\n• Dates, amounts and descriptions require cleaning and standardization.\n• Self-transfers, rent payments and loan repayments must be identified and excluded where applicable.\n• The process becomes increasingly time-consuming as statement volume increases.\n",
   "objective": "Turn any supported bank statement into one clean, standard transaction format automatically.",
   "approach": "Custom Detect Bank & Header and universal Parse Statement Code nodes in n8n.",
   "process": [
@@ -27,8 +26,11 @@
     "Clean & Standardise Transactions",
     "Output"
   ],
+  "diagramImage": "assets/uploads/Screenshot 2026-11-13 233513.png",
   "tools": [
     "n8n",
-    "JavaScript (Code nodes)"
+    "JavaScript (Code nodes)",
+    "HTTP Request",
+    "WebHook"
   ]
 }

@@ -10,9 +10,8 @@
     "n8n"
   ],
   "featured": false,
-  "summary": "n8n workflow that detects which bank a statement came from, identifies its header structure, and parses transactions into one clean, standard format.",
+  "summary": "A web app backed by an n8n workflow: upload a bank statement PDF and download a clean, categorized Excel workbook. The workflow extracts the PDF text, detects which bank issued it, parses transactions with a universal parser into one standard format, then excludes self-transfers, rent and loan repayments with an audit trail and reconciles the result against the original statement then returns a ready-to-use Excel file.",
   "problem": "• Bank statements are often received in PDF format and require manual processing.\n• Analysts may need to extract transactions and transfer them into Excel.\n• Dates, amounts and descriptions require cleaning and standardization.\n• Self-transfers, rent payments and loan repayments must be identified and excluded where applicable.\n• The process becomes increasingly time-consuming as statement volume increases.\n",
-  "objective": "Turn any supported bank statement into one clean, standard transaction format automatically.",
   "approach": "Custom Detect Bank & Header and universal Parse Statement Code nodes in n8n.",
   "process": [
     "Detected the bank and header structure of each statement",

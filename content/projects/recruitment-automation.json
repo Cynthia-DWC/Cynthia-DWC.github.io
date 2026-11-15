@@ -36,8 +36,9 @@
   "diagramImage": "assets/uploads/Recuritmemnt tracker  orignal .png",
   "tools": [
     "n8n",
-    "Google Forms",
-    "Gmail"
+    "Google Forms, Sheet & Drive ",
+    "Gmail",
+    "Code"
   ],
   "results": [
     {
@@ -57,7 +58,5 @@
     "before": "Manual intake, reading and replying. Hours per applicant.",
     "after": "Automated intake, scoring and reply. Minutes per applicant (projected)."
   },
-  "impact": "Faster, more consistent screening and quicker responses to candidates.",
-  "screenshots": [],
-  "screenshotsCaption": ""
+  "impact": "Faster, more consistent screening and quicker responses to candidates."
 }

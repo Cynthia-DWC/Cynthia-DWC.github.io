@@ -12,11 +12,20 @@
   "featured": false,
   "summary": "A web app backed by an n8n workflow: upload a bank statement PDF and download a clean, categorized Excel workbook. The workflow extracts the PDF text, detects which bank issued it, parses transactions with a universal parser into one standard format, then excludes self-transfers, rent and loan repayments with an audit trail and reconciles the result against the original statement then returns a ready-to-use Excel file.",
   "problem": "• Bank statements are often received in PDF format and require manual processing.\n• Analysts may need to extract transactions and transfer them into Excel.\n• Dates, amounts and descriptions require cleaning and standardization.\n• Self-transfers, rent payments and loan repayments must be identified and excluded where applicable.\n• The process becomes increasingly time-consuming as statement volume increases.\n",
-  "approach": "Custom Detect Bank & Header and universal Parse Statement Code nodes in n8n.",
+  "objective": "Reduce the time analysts spend on repetitive bank statement preparation by automating extraction, parsing, reconciliation and classification in one workflow. The solution lowers the errors that come from manual copying and classification and applies the same processing rules to every statement. This lets more statements be processed in the same working period, so analysts can focus on analysis and decision-making rather than data preparation.",
+  "approach": "Web App Upload → Webhook → Extract PDF Text → Detect Bank & Header → Parse & Reconcile → Classify → Copy Template → Build Sheet Data → Write Sheets → Download Excel → Respond to Webhook → Excel Returned to Web App",
   "process": [
-    "Detected the bank and header structure of each statement",
-    "Parsed transactions with a universal Parse Statement node",
-    "Cleaned and standardised the output"
+    "Web app (user uploads statement PDF)",
+    "Webhook (POST): the app sends the file to n8n and starts the workflow",
+    "Extract Text from PDF: turns the statement into raw text",
+    "Detect Bank & Header: identifies the issuing bank and its header structure",
+    "Parse Statement: the universal parser converts transactions into one standard format and reconciles",
+    "Classify: assigns each transaction to Self Transaction, Rent Payment, Loan Repayment, Income, Bank Charge, or Other Transaction (flagged for review)",
+    "Copy Template: copies the prepared Excel template in Google Drive",
+    " Build Sheet Data: arranges classified transactions into the template layout",
+    "Write Sheets: writes the data into the copied workbook through an HTTP request",
+    "Download Excel: downloads the finished workbook from Google Drive",
+    "Respond to Webhook: returns the Excel file to the web app for the user to download"
   ],
   "steps": [
     "Statement Upload",

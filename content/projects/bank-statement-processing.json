@@ -29,6 +29,7 @@
   ],
   "steps": [
     "Statement Upload",
+    "Extract Text from PDF ",
     "Detect Bank & Header",
     "Parse Statement",
     "Clean & Standardise Transactions",
@@ -40,5 +41,16 @@
     "JavaScript (Code nodes)",
     "HTTP Request",
     "WebHook"
-  ]
+  ],
+  "aiComponent": "AI assisted with planning, drafting and troubleshooting the workflow logic as a coworker.\nReal bank statements were never shared with an AI tool, because of privacy policy and the sensitivity of financial data.\nStatement processing runs through deterministic rules in n8n (detection, parsing, reconciliation and classification), so results are repeatable and explainable.\nThe cost design reflects this, since no AI or OCR API is required for the core solution.",
+  "results": [
+    {
+      "text": "Parsed transactions are reconciled against the original statement PDF inside the parser, so errors are caught before classification and output."
+    }
+  ],
+  "beforeAfter": {
+    "before": "Bank statements arrived as PDFs and had to be processed by hand. Analysts copied transactions into Excel, cleaned dates, amounts and descriptions, and manually identified self-transfers, rent payments and loan repayments. Each additional statement added more time and more risk of error.",
+    "after": "A user uploads a PDF in the web app and receives one clean, categorized Excel workbook. Extraction, bank detection, parsing, reconciliation against the original statement, and classification run automatically in n8n. Transactions that need further review are flagged as Other Transactions, so the analyst spends time on judgment calls instead of data preparation."
+  },
+  "impact": "Because the output is reconciled against the original statement at the parsing stage, errors are caught early and the final workbook can be trusted."
 }

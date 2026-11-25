@@ -1,0 +1,55 @@
+{
+  "title": "Airline Delay Analysis Dashboard",
+  "id": "air-001",
+  "order": 4,
+  "published": true,
+  "tracks": [
+    "data-bi"
+  ],
+  "tags": [
+    "Dashboards"
+  ],
+  "context": "Data challenge",
+  "featured": false,
+  "summary": "Power BI analysis of two years of flight arrival data (2023 to 2024), showing which airlines, delay causes, airports and months drive the most disruption.",
+  "problem": "Flight delays cost airlines money through crew overtime, passenger compensation and missed connections, and they damage customer trust. Operations teams had no single view of which carriers, delay causes, airports and periods contribute most to disruption.",
+  "objective": "Measure delay performance across 2023 and 2024, isolate the main causes of delay, and point to the airlines and airports that need the most attention.",
+  "approach": "Cleaned and modelled the flight dataset in Power Query, built DAX measures for total arrivals, delayed flights and delay rate, then designed an interactive Power BI dashboard with a Year and Month slicer.",
+  "tools": [
+    "Power BI",
+    "DAX",
+    "Power Query"
+  ],
+  "results": [
+    {
+      "text": "997 flight arrivals analysed, of which 170 were delayed, an overall delay rate of 0.19%",
+      "basis": "measured"
+    },
+    {
+      "text": "Delay rate peaked in May 2023 at 0.22 and fell to its lowest in March 2024 at 0.10",
+      "basis": "measured"
+    },
+    {
+      "text": "Delay rate dropped noticeably from early 2024 onward, a shift worth investigating for operational causes",
+      "basis": "measured"
+    },
+    {
+      "text": "JetBlue Airways had the highest delay rate over the two years at 0.30, ahead of SkyWest (0.24) and ExpressJet (0.23)",
+      "basis": "measured"
+    },
+    {
+      "text": "Late arrival was the largest delay type, showing that most delays cascade from earlier flights",
+      "basis": "measured"
+    },
+    {
+      "text": "Hartsfield-Jackson Atlanta International Airport recorded the most weather-related delay, affecting many airlines",
+      "basis": "measured"
+    }
+  ],
+  "impact": "Turns a large raw dataset into a decision tool. Because delays mostly cascade from late arrivals, operations teams can add turnaround buffers on tightly connected routes, review the highest-delay carriers first, plan extra capacity for peak months, and build weather contingency at exposed hubs such as Atlanta.",
+  "imageAlt": "Airline Delay Analysis dashboard in Power BI: KPI cards, delay rate by airline, delay types, geographical map, monthly delay trend, weather delay by airport and busiest months by airport",
+  "screenshots": [
+    "assets/uploads/Screenshot 2026-11-25 104329.png"
+  ],
+  "screenshotsCaption": "Airline Delay Analysis dashboard in Power BI: KPI cards, delay rate by airline, delay types, geographical map, monthly delay trend, weather delay by airport and busiest months by airport"
+}

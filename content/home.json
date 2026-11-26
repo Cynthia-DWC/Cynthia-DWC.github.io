@@ -105,13 +105,12 @@
   "featuredProjects": [
     "pharmacy-dashboard",
     "recruitment-automation",
-    "sales-performance",
-    "layoffs-pipeline",
+    "air-001",
     "clinical-dashboard",
     "event-registration",
+    "layoffs-pipeline",
     "daily-sales-reporting",
-    "error-handling-rebuild",
-    "air-001"
+    "error-handling-rebuild"
   ],
   "experienceHeading": "Experience",
   "confidentialityNote": "Employer work is described without client or internal data. Project screenshots use public or synthetic datasets.",

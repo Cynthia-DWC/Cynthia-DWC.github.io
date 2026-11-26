@@ -9,6 +9,8 @@
   "tags": [
     "n8n"
   ],
+  "context": "Professional",
+  "contextDetail": "In use at a bank (name withheld at the client's request)",
   "featured": false,
   "summary": "A web app backed by an n8n workflow: upload a bank statement PDF and download a clean, categorized Excel workbook. The workflow extracts the PDF text, detects which bank issued it, parses transactions with a universal parser into one standard format, then excludes self-transfers, rent and loan repayments with an audit trail and reconciles the result against the original statement then returns a ready-to-use Excel file.",
   "problem": "Bank statements are often received in PDF format and require manual processing.\nAnalysts may need to extract transactions and transfer them into Excel.\nDates, amounts and descriptions require cleaning and standardization.\nSelf-transfers, rent payments and loan repayments must be identified and excluded where applicable.\nThe process becomes increasingly time-consuming as statement volume increases.\n",
@@ -28,12 +30,17 @@
     "Respond to Webhook: returns the Excel file to the web app for the user to download"
   ],
   "steps": [
-    "Statement Upload",
-    "Extract Text from PDF ",
+    "Web App Upload",
+    "Webhook",
+    "Extract PDF Text",
     "Detect Bank & Header",
-    "Parse Statement",
-    "Clean & Standardise Transactions",
-    "Output"
+    "Parse & Reconcile",
+    "Classify",
+    "Copy Template",
+    "Build Sheet Data",
+    "Write Sheets",
+    "Download Excel",
+    "Return Excel to Web App"
   ],
   "diagramImage": "assets/uploads/Screenshot 2026-11-13 233513.png",
   "tools": [
@@ -45,12 +52,18 @@
   "aiComponent": "AI assisted with planning, drafting and troubleshooting the workflow logic as a coworker.\nReal bank statements were never shared with an AI tool, because of privacy policy and the sensitivity of financial data.\nStatement processing runs through deterministic rules in n8n (detection, parsing, reconciliation and classification), so results are repeatable and explainable.\nThe cost design reflects this, since no AI or OCR API is required for the core solution.",
   "results": [
     {
-      "text": "Parsed transactions are reconciled against the original statement PDF inside the parser, so errors are caught before classification and output."
+      "text": "In use at a bank, turning statement PDFs into clean, categorised Excel workbooks (bank not named at its request)",
+      "basis": "measured"
+    },
+    {
+      "text": "Parsed transactions are reconciled against the original statement PDF inside the parser, so errors are caught before classification and output.",
+      "basis": "measured"
     }
   ],
   "beforeAfter": {
     "before": "Bank statements arrived as PDFs and had to be processed by hand. Analysts copied transactions into Excel, cleaned dates, amounts and descriptions, and manually identified self-transfers, rent payments and loan repayments. Each additional statement added more time and more risk of error.",
     "after": "A user uploads a PDF in the web app and receives one clean, categorized Excel workbook. Extraction, bank detection, parsing, reconciliation against the original statement, and classification run automatically in n8n. Transactions that need further review are flagged as Other Transactions, so the analyst spends time on judgment calls instead of data preparation."
   },
-  "impact": "Because the output is reconciled against the original statement at the parsing stage, errors are caught early and the final workbook can be trusted."
+  "impact": "Because the output is reconciled against the original statement at the parsing stage, errors are caught early and the final workbook can be trusted.",
+  "diagramAlt": "n8n canvas of the Bank Statement Analyser workflow, from webhook to Excel download"
 }

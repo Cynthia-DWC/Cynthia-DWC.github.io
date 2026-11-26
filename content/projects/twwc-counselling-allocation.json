@@ -1,0 +1,77 @@
+{
+  "title": "TWWC Participant Management and Counselling Allocation System",
+  "id": "twwc-counselling-allocation",
+  "order": 6,
+  "published": true,
+  "tracks": [
+    "automation"
+  ],
+  "tags": [
+    "n8n"
+  ],
+  "context": "Professional",
+  "contextDetail": "Client: The Whole Woman Conference 2026",
+  "featured": false,
+  "summary": "Live n8n system for a conference counselling session: validates registrations, issues unique IDs, matches each participant to a counsellor by specialty, reserves a time slot and sends confirmations and reminders.",
+  "problem": "The Whole Woman Conference 2026 ran a special counselling session for approved participants only. Five counsellors and five time slots gave a hard cap of 25 sessions, each to be allocated once. Matching people to counsellors by specialty by hand is slow and easy to get wrong, and every participant needed a confirmation and a timely reminder, with no one forgotten and no one messaged twice.",
+  "objective": "Build a hands-off system that registers each approved participant, assigns a unique ID, matches them to the right counsellor by specialty, reserves the earliest available slot and sends the right message at the right time, with an immediate alert if anything cannot be completed.",
+  "approach": "A main n8n workflow (TWWC Participant Management) with a dedicated counsellor matching sub-workflow and an error workflow for alerts. Google Sheets is the data layer: one sheet for participant registrations, one for counsellors with their specialties and available times.",
+  "process": [
+    "Validated every registration with an IF node, stopping incomplete entries before any ID or slot is used",
+    "Generated a unique participant ID with JavaScript in an n8n Code node and used it as the key for every later update",
+    "Built a counsellor matching sub-workflow: match the selected specialty, find the first free slot, reserve it, update the participant record",
+    "Kept the counsellor sheet in the organisers' exact specialty wording so form options and matching always align",
+    "Scheduled reminders with a Wait node until three days before the conference",
+    "Tracked a notification status on each record so every message is sent once",
+    "Connected an error workflow that emails me at once when an execution fails, including when slots run out"
+  ],
+  "steps": [
+    "Google Sheets Trigger",
+    "Clean & Standardise Fields",
+    "Validate Required Fields",
+    "Generate Unique ID",
+    "Save Participant Record",
+    "Send Confirmation",
+    "Match Counsellor & Reserve Slot",
+    "Wait Until 3 Days Before",
+    "Send Reminder",
+    "Update Notification Status"
+  ],
+  "diagramImage": "",
+  "diagramAlt": "",
+  "tools": [
+    "n8n",
+    "Google Sheets",
+    "Gmail",
+    "WhatsApp/SMS messaging",
+    "JavaScript (Code node)"
+  ],
+  "aiComponent": "",
+  "results": [
+    {
+      "text": "Live and running for 8 days (as of 26 November 2026), processing registrations end to end without manual intervention",
+      "basis": "measured"
+    },
+    {
+      "text": "5 participants registered, matched and scheduled so far, with more expected before the session",
+      "basis": "measured"
+    },
+    {
+      "text": "Client confirmed they are satisfied with the system",
+      "basis": "measured"
+    }
+  ],
+  "beforeAfter": {
+    "before": "Counsellor matching, slot booking and reminders handled by hand, with a risk of double bookings, missed reminders and duplicate messages.",
+    "after": "Registration, matching, slot reservation and reminders run automatically, with every slot used once and email alerts for any failure."
+  },
+  "impact": "Less admin for the organisers, a clear and timely experience for participants approaching a sensitive service, fair allocation with no double-booked counsellors, and one sheet showing every participant's status. The pattern of validation, unique ID, matching, timed reminders and error alerting can be reused for other events, clinics and appointment-based services.",
+  "image": "",
+  "imageAlt": "",
+  "screenshots": [],
+  "screenshotsCaption": "",
+  "liveUrl": "",
+  "embedUrl": "",
+  "githubUrl": "",
+  "writeupUrl": ""
+}
